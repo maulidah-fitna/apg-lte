@@ -1,3 +1,16 @@
+<?php
+session_start();
+ob_start();
+
+include "library/config.php";
+
+if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
+    echo "<p align='center'>Anda Harus Login Terlebih Dahulu!</p>";
+    echo "<meta http-equiv='refresh' content='2, url=login.php'>";
+}else{
+    define('INDEX', true);
+?>
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -43,19 +56,19 @@ desired effect
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
+    <!-- <section class="content-header">
+
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
       </ol>
-    </section>
+    </section> -->
 
     <!-- Main content -->
     <section class="content container-fluid">
+      <section class="main">
+        <?php include "konten.php" ?>
+      </section>
 
       <!--------------------------
         | Your Page Content Here |
@@ -75,15 +88,15 @@ desired effect
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      <!-- <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li> -->
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
+        <!-- <h3 class="control-sidebar-heading">Recent Activity</h3> -->
+        <!-- <ul class="control-sidebar-menu">
           <li>
             <a href="javascript:;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
@@ -95,10 +108,10 @@ desired effect
               </div>
             </a>
           </li>
-        </ul>
+        </ul> -->
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <!-- <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript:;">
@@ -114,7 +127,7 @@ desired effect
               </div>
             </a>
           </li>
-        </ul>
+        </ul> -->
         <!-- /.control-sidebar-menu -->
 
       </div>
@@ -148,19 +161,24 @@ desired effect
   immediately after the control sidebar -->
   <!-- <div class="control-sidebar-bg"></div> -->
 </div>
+
+
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 3 -->
-<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<!-- <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<!-- <script src="dist/js/adminlte.min.js"></script> -->
+<script src="dist/js/adminlte.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
+     <?php
+}
+     ?>
 </body>
 </html>

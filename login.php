@@ -7,17 +7,24 @@ include "library/config.php";
 <html>
 <head>
     <?php include "parts/head.php" ?>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="hold-transition login-page">
+
+
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+
+    <a href=""></a>
+
+    
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Sign In</p>
 
-    <form action="../../index2.html" method="post">
+    <!-- <form action="../../index2.html" method="post"> -->
+    <form action="ceklogin.php" method="post">  
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="username" placeholder="Username">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

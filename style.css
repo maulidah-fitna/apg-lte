@@ -1,0 +1,51 @@
+
+    /* Konten Utama */
+    .main-content {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+             color: #4A148C; /* Ungu tua */
+             margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            width: 45%;
+            /* background-color: rgba(255, 255, 255, 0.9); Putih transparan */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+            align: center;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            /* margin-bottom: 10px; */
+        }
+
+        .info-card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .info-card a:hover {
+            color: #78909C;
+        }
+
+        .logo {
+            size: 10px;
+            align-items: center;
+        }

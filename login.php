@@ -15,8 +15,8 @@ include "library/config.php";
 <div class="login-box">
   <div class="login-logo">
 
-    <a href=""></a>
-
+    <img src=""></a>
+  
     
   </div>
   <!-- /.login-logo -->

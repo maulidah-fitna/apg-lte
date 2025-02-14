@@ -1,7 +1,3 @@
- <!-- <head>
-    <?php /*include "../parts/head.php"*/ ?>
-</head> -->
-
 <section class="content">
       <div class="row">
         <div class="col-xs-12">
@@ -9,7 +5,6 @@
             <div class="box-header">
               <h3 class="box-title">Hover Data Table</h3>
             </div>
-            <!-- /.box-header -->
 
             <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
@@ -20,20 +15,9 @@
                         </span>
                 </div>
             </form>
-
-            <form action="data-absen-insert.php" method="post">
              <div class="box-body"> 
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
-                <!-- <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr> -->
-
-
                     <th>No</th>
                     <th>Nama</th>
                     <th>Hadir</th>
@@ -50,10 +34,7 @@
                 <tbody>
                 
                 <?php
-                        $query = "SELECT * FROM siswa_putra WHERE kelas='10' && jurusan='PPLG'";
-                        // $query .= "LEFT JOIN data-absen ";
-                        // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
-                        // $query .= "ORDER BY pegawai.id_jabatan DESC";
+                        $query = "SELECT * FROM siswa_putri WHERE kelas='12' && jurusan='PBS'";
                         $result = mysqli_query($con, $query);
                         $no = 0;
 
@@ -61,15 +42,7 @@
                             $no++;
                         ?>
 
-                <!-- <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr> -->
-
-                <tr>
+                            <tr>
                                 <td><?=$no?></td>
                                 <td><?=$data['nama_siswa']?></td>
                                 <td><input type="radio"></td>
@@ -90,12 +63,6 @@
                 </tbody>
                 <tfoot>
                 <tr>
-                  <!-- <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th> -->
-
                   <th>No</th>
                     <th>Nama</th>
                     <th>Hadir</th>
@@ -113,21 +80,15 @@
 
                 
               </table>
-
               <input type="submit" value="Submit">
-              
-            </form>
-            </div>
-
-            <!-- /.box-body -->
+            </div> 
           </div>
-          <!-- /.box -->
 
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Data Table With Full Features</h3>
             </div>
-            <!-- /.box-header -->
+
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -160,13 +121,13 @@
                 </tfoot>
               </table>
             </div>
-            <!-- /.box-body -->
+
           </div>
-          <!-- /.box -->
+
         </div>
-        <!-- /.col -->
+
       </div>
-      <!-- /.row -->
+
     </section>
 
 

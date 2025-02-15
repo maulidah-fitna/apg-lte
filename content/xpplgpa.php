@@ -1,6 +1,15 @@
- <!-- <head>
-    <?php /*include "../parts/head.php"*/ ?>
-</head> -->
+<head>
+<link rel="stylesheet" href="style-btn.css">
+</head>
+
+
+<button class="back-button" onclick="goBack()">Kembali</button> 
+            <script>
+        // Fungsi untuk kembali ke halaman sebelumnya
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 
 <section class="content">
       <div class="row">
@@ -21,8 +30,10 @@
                 </div>
             </form>
 
-            <form action="data-absen-insert.php" method="post">
-             <div class="box-body"> 
+
+
+            <form action="?hal=data-absen-insert" method="post">
+             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <!-- <tr>
@@ -69,12 +80,12 @@
                   <td>U</td>
                 </tr> -->
 
-                <tr>
+                <!-- <tr>
                                 <td><?=$no?></td>
                                 <td><?=$data['nama_siswa']?></td>
-                                <td><input type="radio" name="hadir"></td>
-                                <td><input type="radio" name="alpa"></td>
-                                <td><input type="radio" name="izin"></td>
+                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
+                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
+                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>                                
                                 
                                 <td><input type="checkbox" name="kaos-kaki" checked></td>
                                 <td><input type="checkbox" name="sabuk" checked></td>
@@ -82,7 +93,22 @@
                                 <td><input type="checkbox" name="songkok" checked></td>
                                 <td><input type="checkbox" name="sepatu" checked></td>
                                 <td><input type="checkbox" name="hasduk" checked></td>
-                            </tr>
+                            </tr> -->
+                            <tr>
+            <td><?= $no ?></td>
+            <td><?= $data['nama_siswa'] ?></td>
+            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
+            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
+            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>
+
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="kaos-kaki" checked></td>
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sabuk" checked></td>
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="seragam" checked></td>
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="songkok" checked></td>
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sepatu" checked></td>
+            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="hasduk" checked></td>
+        </tr>
+
 <?php
     }
 ?>
@@ -114,7 +140,7 @@
                 
               </table>
 
-              <input type="submit" value="Submit">
+              <input type="submit" name ="submit" value="Simpan">
               
             </form>
             </div>
@@ -129,7 +155,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <!-- <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Rendering engine</th>
@@ -158,7 +184,7 @@
                   <th>CSS grade</th>
                 </tr>
                 </tfoot>
-              </table>
+              </table> -->
             </div>
             <!-- /.box-body -->
           </div>

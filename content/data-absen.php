@@ -10,7 +10,7 @@ if(!defined('INDEX')) die("");
         <h1>Pilih Kelas</h1>
         
         <div class="class-container">
-            <div class="class-group">
+            <div class="class-buttons">
                 <span class="labels">Putra</span>
                 <div class="class-buttons">
                     <a href="?hal=xpplgpa"><button>X PPLG</button></a>
@@ -21,7 +21,7 @@ if(!defined('INDEX')) die("");
                     <a href="?hal=xiipbspa"><button>XII PBS</button></a>
                 </div>
             </div>
-            <div class="class-group">
+            <div class="class-buttons">
                 <span class="labels">Putri</span>
                 <div class="class-buttons">
                     <a href="?hal=xpplgpi"><button>X PPLG</button></a>

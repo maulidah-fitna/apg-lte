@@ -35,6 +35,19 @@
         <li><a href="?hal=data-absen"><i class="fa fa-user"></i> <span>Absensi</span></a></li>
         <li><a href="?hal=data-rekap"><i class="fa fa-chart-bar"></i> <span>Data Rekap</span></a></li>
         <li><a href="?hal=pengaturan"><i class="fa fa-cog"></i> <span>Pengaturan</span></a></li>
+        
+        <li class="treeview menu-open" style="height: auto;">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Master Data</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: block;">
+            <li><a href="?hal=data-siswa"><i class="fa fa-circle-o"></i> Data Siswa</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data User</a></li>
+          </ul>
+        </li>
         <li class="treeview">
           <!-- <a href="#"><i class="fa fa-link"></i> <span>Data Rekap</span>
             <span class="pull-right-container">

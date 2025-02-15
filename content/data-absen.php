@@ -37,3 +37,15 @@ if(!defined('INDEX')) die("");
 
 </body>
 </html>
+
+<!-- <div class="class-buttons">
+                <span class="labels">Putra</span>
+                <div class="row btn btn-block btn-primary btn-sm">
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xpplgpa"><button>X PPLG</button></a>
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xaklpa"><button>X AKL</button></a>
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xirplpa"><button>XI RPL</button></a>
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xilpspa"><button>XI LPS</button></a>
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xiirplpa"><button>XII RPL</button></a>
+                    <a class="btn btn-block btn-primary btn-sm" href="?hal=xiipbspa"><button>XII PBS</button></a>
+                </div>
+            </div> -->

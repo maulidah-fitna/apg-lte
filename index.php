@@ -5,8 +5,8 @@ ob_start();
 include "library/config.php";
 
 if (empty($_SESSION['username']) OR empty($_SESSION['password'])) {
-    echo "<p align='center'>Anda Harus Login Terlebih Dahulu!</p>";
-    echo "<meta http-equiv='refresh' content='2, url=login.php'>";
+    // echo "<p align='center'>Anda Harus Login Terlebih Dahulu!</p>";
+    echo "<meta http-equiv='refresh' content='0, url=landing.php'>";
 }else{
     define('INDEX', true);
 ?>
@@ -173,6 +173,9 @@ desired effect
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
@@ -180,5 +183,19 @@ desired effect
      <?php
 }
      ?>
+     <!-- script untuk data tabel -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>

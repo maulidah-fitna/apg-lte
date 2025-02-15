@@ -11,6 +11,7 @@
         "tambah-user",
         "user-insert",
         "data-admin",
+        "data-siswa",
         "masukan",
         "xaklpa",
         "xaklpi",

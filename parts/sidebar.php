@@ -45,7 +45,7 @@
           </a>
           <ul class="treeview-menu" style="display: block;">
             <li><a href="?hal=data-siswa"><i class="fa fa-circle-o"></i> Data Siswa</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data User</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Data User</a></li>
           </ul>
         </li>
         <li class="treeview">

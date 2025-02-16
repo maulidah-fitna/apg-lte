@@ -1,11 +1,54 @@
 <?php
 if(!defined('INDEX')) die();
 
+// $query = "SELECT * FROM data_rekap";
+// $result = mysqli_query($con, $query);
+
 $query = "SELECT * FROM data_rekap";
-$result = mysqli_query($con, $query);
+$result = $con->query("SELECT * FROM data_rekap")
 ?>
 
-<section class="content">
+<div class="container">
+    <h2 class="mt-4">Rekap Absensi</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Hadir</th>
+                <th>Alpa</th>
+                <th>Izin</th>
+                <th>Kaos Kaki</th>
+                <th>Sabuk</th>
+                <th>Seragam</th>
+                <th>Songkok</th>
+                <th>Sepatu</th>
+                <th>Hasduk</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $no = 1; while ($row = $result->fetch_assoc()) { 
+                $nama = (!empty($row['nama_siswa'])) ? htmlspecialchars($row['nama_siswa']) : 'Tidak Ada Data';?>
+                <tr>
+                    <td><?= $no++; ?></td>
+                    <td><?= htmlspecialchars($row['nama_siswa']); ?></td>
+                    <td><input type="radio" <?= ($row['kehadiran'] == 'Hadir') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="radio" <?= ($row['kehadiran'] == 'Alpa') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="radio" <?= ($row['kehadiran'] == 'Izin') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['kaos-kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['sabuk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['seragam'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['songkok'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['sepatu'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['hasduk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- <section class="content">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
@@ -28,40 +71,44 @@ $result = mysqli_query($con, $query);
                     </tr>
                     </div>
 
-    </thead>
+    </thead> -->
           <!-- /.box -->
-          </div>
+          <!-- </div> -->
         <!-- /.col -->
-      </div>
+      <!-- </div> -->
       <!-- /.row -->
-    </section>
+    <!-- </section> -->
 
     <?php
-    $no = 1;
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        echo "<td>" . $no++ . "</td>";
-        echo "<td>" . $row['nama_siswa'] . "</td>";
-        echo "<td>" . $row['kehadiran'] . "</td>";
-        echo "<td>" . $row['atribut'] . "</td>";
-        echo "</tr>";
-    }
+    // $kehadiran = isset($row['kehadiran']) ? $row['kehadiran'] : "Tidak Ada Data";
+    // $atribut = isset($row['atribut']) ? $row['atribut'] : "Tidak Ada Data";
+    // $no = 1;
+    
+    
+    // while ($row = mysqli_fetch_assoc($result)) {
+    //     echo "<tr>";
+    //     echo "<td>" . $no++ . "</td>";
+    //     echo "<td>" . $row['nama_siswa'] . "</td>";
+    //     echo "<td>" . htmlspecialchars($kehadiran) . "</td>";
+    //     echo "<td>" . htmlspecialchars($atribut) . "</td>";
+    //     echo "</tr>";
+    // }
 
-    if($row['atribut'] == "") {
-        if($kehadiran['hadir']==true) {
-            $kehadiran['hadir'] = "checked";
-            $kehadiran['alpa'] = "";
-            $kehadiran['izin'] = "";
+    // if($row['atribut'] == "") {
+    //     if($kehadiran['hadir']==true) {
+    //         $kehadiran['hadir'] = "checked";
+    //         $kehadiran['alpa'] = "";
+    //         $kehadiran['izin'] = "";
             
-         }else if($kehadiran['alpa'] == true) {
-            $kehadiran['hadir'] = "";
-            $kehadiran['alpa'] = "checked";
-            $kehadiran['izin'] = "";
-         }else if($kehadiran['izin'] == true) {
-            $kehadiran['hadir'] = "";
-            $kehadiran['alpa'] = "";
-            $kehadiran['izin'] = "checked";
-         }
-    }
+    //      }else if($kehadiran['alpa'] == true) {
+    //         $kehadiran['hadir'] = "";
+    //         $kehadiran['alpa'] = "checked";
+    //         $kehadiran['izin'] = "";
+    //      }else if($kehadiran['izin'] == true) {
+    //         $kehadiran['hadir'] = "";
+    //         $kehadiran['alpa'] = "";
+    //         $kehadiran['izin'] = "checked";
+    //      }
+    // }
     ?>
-</table>
+<!-- </table> -->

@@ -20,7 +20,8 @@
         "xirplpa",
         "xirplpi",
         "xilpspa",
-        "xilpspi"
+        "xilpspi",
+        "presensi"
     ];
 
     if (isset($_GET['hal'])) {

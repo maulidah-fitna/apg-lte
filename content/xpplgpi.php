@@ -34,6 +34,7 @@
                 <tbody>
                 
                 <?php
+                
                         $query = "SELECT * FROM siswa_putri WHERE kelas='10' && jurusan='PPLG'";
                         $result = mysqli_query($con, $query);
                         $no = 0;

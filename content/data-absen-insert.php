@@ -1,5 +1,70 @@
-<?php
+<!-- <?php
 if(!defined('INDEX')) die();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama_siswa'];
+    $kehadiran = $_POST['kehadiran']; // Radio button (Hadir, Alpa, Izin)
+    
+    // Checkbox (jika tidak dicentang, nilai tidak dikirim, maka kita set defaultnya '-')
+    $atribut = [
+        'kaos_kaki' => isset($_POST['kaos-kaki']) ? 'Lengkap' : '-',
+        'sabuk' => isset($_POST['sabuk']) ? 'Lengkap' : '-',
+        'seragam' => isset($_POST['seragam']) ? 'Lengkap' : '-',
+        'songkok' => isset($_POST['songkok']) ? 'Lengkap' : '-',
+        'sepatu' => isset($_POST['sepatu']) ? 'Lengkap' : '-',
+        'hasduk' => isset($_POST['hasduk']) ? 'Lengkap' : '-',
+    ];
+
+    // Query untuk memasukkan data ke dalam database
+    $sql = "INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("ssssssss", 
+        $nama, $kehadiran, 
+        $atribut['kaos-kaki'], $atribut['sabuk'], $atribut['seragam'], 
+        $atribut['songkok'], $atribut['sepatu'], $atribut['hasduk']
+    );
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Data berhasil disimpan!'); window.location.href='data-rekap.php';</script>";
+    } else {
+        echo "<script>alert('Gagal menyimpan data!');</script>";
+    }
+
+    $stmt->close();
+    $con->close();
+}
+
+
+
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//     foreach ($_POST['kehadiran'] as $id_siswa => $kehadiran) {
+//         // Ambil atribut (checkbox) yang dipilih untuk siswa ini
+//         $atribut = isset($_POST['atribut'][$id_siswa]) ? implode(", ", $_POST['atribut'][$id_siswa]) : "Tidak ada";
+        
+//         // Query untuk menyimpan ke database
+//         $atribut = isset($_POST['atribut'][$id_siswa]) ? implode(", ", $_POST['atribut'][$id_siswa]) : "";
+//         $query = "INSERT INTO data_rekap (id, kehadiran, atribut) 
+//                   VALUES ('$id_siswa', '$kehadiran', '$atribut')";
+//         // Eksekusi query
+//         if (mysqli_query($con, $query)) {
+//             echo "Data siswa ID $id_siswa berhasil disimpan.<br>";
+//         } else {
+//             echo "Error: " . mysqli_error($con);
+//         }
+//     }
+// }
+
+
+
+
+
+
+// Tutup koneksi
+// mysqli_close($con);
+
+?>
 
 // if(!defined('INDEX')) die("");
 
@@ -105,35 +170,4 @@ if(!defined('INDEX')) die();
 //         }
 //     }
 // } //else {
-//     echo "Form tidak dikirim dengan metode POST.";
- 
-
-
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    foreach ($_POST['kehadiran'] as $id_siswa => $kehadiran) {
-        // Ambil atribut (checkbox) yang dipilih untuk siswa ini
-        $atribut = isset($_POST['atribut'][$id_siswa]) ? implode(", ", $_POST['atribut'][$id_siswa]) : "Tidak ada";
-        
-        // Query untuk menyimpan ke database
-        $query = "INSERT INTO data_rekap (id, kehadiran, kaos_kaki, sabuk, seragam, songkok, hasduk) VALUES ('$id_siswa', '$kehadiran', '$atribut[ <?= $no ?> ]', '$atribut[ <?= $no ?> ]', '$atribut[ <?= $no ?> ]', '$atribut[ <?= $no ?> ]', '$atribut[ <?= $no ?> ]')";
-
-        // Eksekusi query
-        if (mysqli_query($con, $query)) {
-            echo "Data siswa ID $id_siswa berhasil disimpan.<br>";
-        } else {
-            echo "Error: " . mysqli_error($con);
-        }
-    }
-}
-
-
-
-
-
-
-// Tutup koneksi
-mysqli_close($con);
-
-?>
+//     echo "Form tidak dikirim dengan metode POST."; -->

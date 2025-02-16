@@ -30,6 +30,7 @@ if(!defined('INDEX')) die("");
                     <a href="?hal=xilpspi"><button>XI LPS</button></a>
                     <a href="?hal=xiirplpi"><button>XII RPL</button></a>
                     <a href="?hal=xiipbspi"><button>XII PBS</button></a>
+                    <a href="?hal=presensi&k=10&j=pplg&g=l"><button>X PPLG PUTRA</button></a>
                 </div>
             </div>
         </div>

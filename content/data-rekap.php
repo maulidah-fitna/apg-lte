@@ -35,7 +35,7 @@ $result = $con->query("SELECT * FROM data_rekap")
                     <td><input type="radio" <?= ($row['kehadiran'] == 'Hadir') ? 'checked' : ''; ?> disabled></td>
                     <td><input type="radio" <?= ($row['kehadiran'] == 'Alpa') ? 'checked' : ''; ?> disabled></td>
                     <td><input type="radio" <?= ($row['kehadiran'] == 'Izin') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['kaos-kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= ($row['kaos_kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
                     <td><input type="checkbox" <?= ($row['sabuk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
                     <td><input type="checkbox" <?= ($row['seragam'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
                     <td><input type="checkbox" <?= ($row['songkok'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>

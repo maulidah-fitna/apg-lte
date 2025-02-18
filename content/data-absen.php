@@ -37,6 +37,7 @@ if(!defined('INDEX')) die("");
 
 </body> -->
 
+<span><h3>PUTRA</h3></span>
 <div class="row">
         <div class="col-lg-6 col-xs-6">
           <!-- small box -->
@@ -126,7 +127,7 @@ if(!defined('INDEX')) die("");
         <!-- ./col -->
       </div>
 
-
+<span><h1>PUTRI</h1></span>
 <div class="row">
 <div class="col-lg-6 col-xs-6">
           <!-- small box -->

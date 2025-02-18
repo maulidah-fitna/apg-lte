@@ -3,24 +3,22 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                <h3 class="box-title">Data Siswa</h3>
+                <h3 class="box-title">Data User</h3>
                 </div>
                 <div class="box-body">
-                <div><a href="?hal=tambah-siswa" class="btn  btn-primary">Tambah</a></div><br>
+                <div><a href="?hal=tambah-user" class="btn  btn-primary">Tambah</a></div><br>
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>NIS</th>
-                                <th>Nama Siswa</th>
-                                <th>Kelas</th>            
-                                <th>Jurusan</th>
-                                <th>Gender</th>
+                                <th>Nama Lengkap</th>            
+                                <th>Username</th>
+                                <th>Password</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            $query = "SELECT * FROM data_siswa";
+                            $query = "SELECT * FROM user";
                             $result = mysqli_query($con, $query);
                             $no = 0;
                             
@@ -30,11 +28,9 @@
                             ?>
                             <tr>
                                 <td><?=$no?></td>
-                                <td><?=$data['nisn']?></td>
-                                <td><?=$data['nama_siswa']?></td>
-                                <td><?=$data['kelas']?></td>
-                                <td><?=$data['jurusan']?></td>
-                                <td><?=$data['gender']?></td>
+                                <td><?=$data['nama_lengkap']?></td>
+                                <td><?=$data['username']?></td>
+                                <td><?=$data['password']?></td>
                             </tr>
 <?php
 }

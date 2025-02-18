@@ -18,13 +18,14 @@ $g = $_GET['g']
 <section class="content">
       <div class="row">
         <div class="col-xs-12">
+          <div class="dataTables_length" id="example1_length">
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Absensi</h3>
             </div>
             <!-- /.box-header -->
 
-            <form action="#" method="get" class="sidebar-form">
+            <!-- <form action="#" method="get" class="sidebar-form">
                 <div class="input-group">
                     <input type="text" name="q" class="form-control" placeholder="Search...">
                         <span class="input-group-btn">
@@ -32,13 +33,15 @@ $g = $_GET['g']
                         </button>
                         </span>
                 </div>
-            </form>
+            </form> -->
 
 
 
             <form action="?hal=data-absen-insert" method="post">
              <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
+              <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                <div class="overflow auto">
+              <table id="example2" class="table table-bordered table-hover table-responsive table-sm table-stripped">
                 <?php
                 if($_GET['g']=='l') {
                     $no = 1;
@@ -186,7 +189,7 @@ $g = $_GET['g']
 
                 
               </table>
-
+</div>
               <input type="submit" name ="submit" value="Simpan">
               
             </form>
@@ -200,6 +203,8 @@ $g = $_GET['g']
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
+        </div>
+        </div>
         </div>
         <!-- /.col -->
       </div>

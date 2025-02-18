@@ -34,7 +34,7 @@
         <li><a href="?hal=dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="?hal=data-absen"><i class="fa fa-user"></i> <span>Absensi</span></a></li>
         <li><a href="?hal=data-rekap"><i class="fa fa-chart-bar"></i> <span>Data Rekap</span></a></li>
-        <li><a href="?hal=pengaturan"><i class="fa fa-cog"></i> <span>Pengaturan</span></a></li>
+        <!-- <li><a href="?hal=pengaturan"><i class="fa fa-cog"></i> <span>Pengaturan</span></a></li> -->
         
         <li class="treeview menu-open" style="height: auto;">
           <a href="#">
@@ -45,7 +45,7 @@
           </a>
           <ul class="treeview-menu" style="display: block;">
             <li><a href="?hal=data-siswa"><i class="fa fa-circle-o"></i> Data Siswa</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Data User</a></li>
+            <li><a href="?hal=data-user"><i class="fa fa-circle-o"></i> Data User</a></li>
           </ul>
         </li>
         <li class="treeview">

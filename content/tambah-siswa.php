@@ -4,7 +4,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="?hal=siswa-insert" class="form-horizontal" enctype="multipart/form-data">
+            <form action="?hal=siswa-insert" method="post" class="form-horizontal" enctype="multipart/form-data">
               <div class="box-body">
                 <div class="form-group">
                   <label for="nis" class="col-sm-2 control-label">NIS</label>
@@ -25,7 +25,7 @@
 
                   <!-- <div class="col-sm-10"> -->
                   <!-- <div class="input"> -->
-            <select name="kelas" id="kelas">
+            <select name="kelas" id="kelas" class="form-control" required>
             <option value=""> - Pilih Kelas - </option>
             <option value=""> 10 </option>
             <option value=""> 11 </option>
@@ -36,7 +36,7 @@
 <div class="form-group">
 <label for="jurusan" class="col-sm-2 control-label">Jurusan</label>
 
-<select name="jurusan" id="jurusan">
+<select name="jurusan" id="jurusan" class="form-control" required>
             <option value=""> - Pilih Jurusan - </option>
             <option value=""> RPL </option>
             <option value=""> PBS </option>
@@ -44,8 +44,8 @@
 </div>
 <div class="form-group">
         <label for="jk" class="col-sm-2 control-label">Jenis Kelamin</label>
-        <input type="radio" name="gender" id="jk" value="l"> Laki-Laki  
-        <input type="radio" name="gender" id="jk" value="p"> Perempuan
+        <input type="radio" name="gender" id="jk" value="l" required> Laki-Laki  
+        <input type="radio" name="gender" id="jk" value="p" required> Perempuan
     </div>
 </div>
 

@@ -143,29 +143,6 @@ $g = $_GET['g']
                         while($data = mysqli_fetch_assoc($result)) {
                             $no++;
                         ?>
-
-                <!-- <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr> -->
-
-                <!-- <tr>
-                                <td><?=$no?></td>
-                                <td><?=$data['nama_siswa']?></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>                                
-                                
-                                <td><input type="checkbox" name="kaos-kaki" checked></td>
-                                <td><input type="checkbox" name="sabuk" checked></td>
-                                <td><input type="checkbox" name="seragam" checked></td>
-                                <td><input type="checkbox" name="songkok" checked></td>
-                                <td><input type="checkbox" name="sepatu" checked></td>
-                                <td><input type="checkbox" name="hasduk" checked></td>
-                            </tr> -->
           <tr>
             <td><?= $no ?></td>
             <td><?= $data['nama_siswa'] ?></td>

@@ -30,7 +30,7 @@
                             ?>
                             <tr>
                                 <td><?=$no?></td>
-                                <td><?=$data['nisn']?></td>
+                                <td><?=$data['nis']?></td>
                                 <td><?=$data['nama_siswa']?></td>
                                 <td><?=$data['kelas']?></td>
                                 <td><?=$data['jurusan']?></td>

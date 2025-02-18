@@ -13,6 +13,7 @@
         "data-admin",
         "data-siswa",
         "tambah-siswa",
+        "siswa-insert",
         "masukan",
         "xaklpa",
         "xaklpi",

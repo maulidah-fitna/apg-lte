@@ -219,11 +219,17 @@
 
             <!-- password -->
             <div class="form-group">
-                <label for="nis" class="col-sm-2 control-label">Password</label>
+                <label for="password" class="col-sm-2 control-label">Password</label>
                 <div class="col-sm-10">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required><br>
+                    <span class="input-group-append" id="togglePassword" style="cursor: pointer;">
+                <span class="input-group-text"><i class="fa fa-eye"></i></span> <!-- Ikon mata di kanan -->
+            </span>
                 </div>
             </div>
+            <!-- <span class="input-group-addon" id="togglePassword" style="cursor: pointer;">
+                <i class="fa fa-eye"></i>  Ikon mata
+            </span>-->
 
             <!-- Kelas -->
             <!-- <div class="form-group">
@@ -256,6 +262,19 @@
 </div>
 
 <script>
+    // Menangani toggle password visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordField = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // Toggle password visibility
+        const type = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = type;
+
+        // Toggle ikon mata
+        this.innerHTML = type === 'password' ? '<i class="fa fa-eye"></i>' : '<i class="fa fa-eye-slash"></i>';
+    });
+
     function goBack() {
         window.history.back();
     }

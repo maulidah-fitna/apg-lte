@@ -15,6 +15,7 @@
         "tambah-siswa",
         "siswa-insert",
         "edit-siswa",
+        "edit-user",
         "siswa-hapus",
         "siswa-update",
         "siswa-hapus",

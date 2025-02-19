@@ -14,6 +14,7 @@
                                 <th>Nama Lengkap</th>            
                                 <th>Username</th>
                                 <th>Password</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,6 +32,10 @@
                                 <td><?=$data['nama_lengkap']?></td>
                                 <td><?=$data['username']?></td>
                                 <td><?=$data['password']?></td>
+                                <td>
+                                    <a href="?hal=edit-user&id_user=<?=$data['id_user']?>" class="btn btn-block btn-warning">Edit</a>
+                                    <a href="?hal=siswa-hapus&id=<?=$data['id_user']?>" class="btn btn-block btn-danger">Hapus</a>
+                                </td>
                             </tr>
 <?php
 }

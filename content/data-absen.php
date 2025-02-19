@@ -36,7 +36,7 @@ if(!defined('INDEX')) die("");
     </div>
 
 </body> -->
-
+<section class="content">
 <span><h3>PUTRA</h3></span>
 <div class="row">
         <div class="col-lg-6 col-xs-6">
@@ -44,13 +44,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=10&j=pplg&g=l"><h3>X PPLG</h3></a>
+              <h3> X PPLG </h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=10&j=pplg&g=l" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -58,13 +58,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=10&j=akl&g=l"><h3>X AKL</h3></a>
+              <h3>X AKL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=10&j=akl&g=l" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -72,13 +72,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=11&j=rpl&g=l"><h3>XI RPL</h3></a>
+              <h3>XI RPL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=11&j=rpl&g=l" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -86,13 +86,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=11&j=lps&g=l"><h3>XI LPS</h3></a>
+              <h3>XI LPS</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=11&j=lps&g=l" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -100,13 +100,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=12&j=rpl&g=l"><h3>XII RPL</h3></a>
+              <h3>XII RPL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=12&j=rpl&g=l" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -114,33 +114,33 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=12&j=pbs&g=l"><h3>XII PBS</h3></a>
+              <h3>XII PBS</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=12&j=pbs&g=l" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
        
         <!-- ./col -->
       </div>
 
-<span><h1>PUTRI</h1></span>
+<span><h3>PUTRI</h3></span>
 <div class="row">
 <div class="col-lg-6 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=10&j=pplg&g=p"><h3>X PPLG</h3></a>
+              <h3>X PPLG</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=10&j=pplg&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -148,13 +148,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=10&j=akl&g=p"><h3>X AKL</h3></a>
+              <h3>X AKL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=10&j=akl&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -162,13 +162,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=11&j=rpl&g=p"><h3>XI RPL</h3></a>
+              <h3>XI RPL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=11&j=rpl&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -176,13 +176,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=11&j=lps&g=p"><h3>XI LPS</h3></a>
+              <h3>XI LPS</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=11&j=lps&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -190,13 +190,13 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=12&j=rpl&g=p"><h3>XII RPL</h3></a>
+              <h3>XII RPL</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=12&j=rpl&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <div class="col-lg-6 col-xs-6">
@@ -204,19 +204,19 @@ if(!defined('INDEX')) die("");
           <div class="small-box bg-aqua">
             <div class="inner">
 
-              <a href="?hal=presensi&k=12&j=pbs&g=p"><h3>XII PBS</h3></a>
+              <h3>XII PBS</h3>
 
             </div>
             <div class="icon">
               <!-- <i class="ion ion-bag"></i> -->
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="?hal=presensi&k=12&j=pbs&g=p" class="small-box-footer"> Lihat <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
        
         <!-- ./col -->
       </div>
-
+      </section>
 </html>
 
 <!-- <div class="class-buttons">

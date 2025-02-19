@@ -16,6 +16,7 @@
                                 <th>Kelas</th>            
                                 <th>Jurusan</th>
                                 <th>Gender</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,10 @@
                                 <td><?=$data['kelas']?></td>
                                 <td><?=$data['jurusan']?></td>
                                 <td><?=$data['gender']?></td>
+                                <td>
+                                    <a href="?hal=edit-siswa&nis=<?=$data['nis']?>" class="btn btn-block btn-warning">Edit</a>
+                                    <a href="?hal=siswa-hapus&nis=<?=$data['nis']?>" class="btn btn-block btn-danger">Hapus</a>
+                                </td>
                             </tr>
 <?php
 }

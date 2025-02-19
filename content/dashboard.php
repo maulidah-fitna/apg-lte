@@ -37,10 +37,10 @@
       <h1>
         Dashboard
       </h1>
-      <ol class="breadcrumb">
+      <!-- <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
-      </ol>
+      </ol> -->
 </section>
 
 <section class="content">
@@ -78,7 +78,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>53<sup style="font-size: 20px"></sup></h3>
 
               <p>Hadir</p>
             </div>

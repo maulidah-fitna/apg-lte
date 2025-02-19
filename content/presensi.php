@@ -2,12 +2,16 @@
 <!-- <link rel="stylesheet" href="style-btn.css"> -->
 </head>
 <?php
-$j = $_GET['j'];
-$k = $_GET['k'];
-$g = $_GET['g']
+// $j = $_GET['j'];
+// $k = $_GET['k'];
+// $g = $_GET['g']
+
+$j = htmlspecialchars($_GET['j'] ?? '');
+$k = htmlspecialchars($_GET['k'] ?? '');
+$g = htmlspecialchars($_GET['g'] ?? '');
 ?>
 
-<button class="back-button" onclick="goBack()">Kembali</button> 
+<button class="btn  btn-primary" onclick="goBack()">Kembali</button> 
             <script>
         // Fungsi untuk kembali ke halaman sebelumnya
         function goBack() {

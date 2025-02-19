@@ -134,7 +134,6 @@
             <!-- Jenis Kelamin -->
             <div class="form-group">
                 <label for="gender" class="col-sm-2 control-label">Jenis Kelamin</label>
-                <div class="col-sm-10">
                     <label><input type="radio" name="gender" value="l" required> Laki-Laki</label>
                     <label><input type="radio" name="gender" value="p" required> Perempuan</label>
                 </div>
@@ -144,7 +143,7 @@
 
         <!-- Tombol Submit -->
         <div class="box-footer">
-            <button type="button" class="btn btn-default button-back" onclick="goBack()">Batal</button>
+            <button type="button" class="btn btn-default" onclick="goBack()">Batal</button>
             <input type="submit" value="Simpan" class="btn btn-primary">
         </div>
         <!-- /.box-footer -->

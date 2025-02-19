@@ -14,6 +14,10 @@
         "data-siswa",
         "tambah-siswa",
         "siswa-insert",
+        "edit-siswa",
+        "siswa-hapus",
+        "siswa-update",
+        "siswa-hapus",
         "masukan",
         "xaklpa",
         "xaklpi",
@@ -24,6 +28,7 @@
         "xilpspa",
         "xilpspi",
         "presensi"
+        // "z-coretan"
     ];
 
     if (isset($_GET['hal'])) {

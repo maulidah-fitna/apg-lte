@@ -5,7 +5,11 @@ if(!defined('INDEX')) die();
 // $result = mysqli_query($con, $query);
 
 $query = "SELECT * FROM data_rekap";
-$result = $con->query("SELECT * FROM data_rekap")
+$result = mysqli_query($con, $query);
+
+if (!$result) {
+    die("Error dalam mengambil data: " . mysqli_error($con));
+}
 ?>
 
 <div class="container">
@@ -13,11 +17,10 @@ $result = $con->query("SELECT * FROM data_rekap")
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
+            <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>Hadir</th>
-                <th>Alpa</th>
-                <th>Izin</th>
+                <th>Kehadiran</th>
                 <th>Kaos Kaki</th>
                 <th>Sabuk</th>
                 <th>Seragam</th>
@@ -25,22 +28,38 @@ $result = $con->query("SELECT * FROM data_rekap")
                 <th>Sepatu</th>
                 <th>Hasduk</th>
             </tr>
+            </tr>
         </thead>
         <tbody>
-            <?php $no = 1; while ($row = $result->fetch_assoc()) { 
-                $nama = (!empty($row['nama_siswa'])) ? htmlspecialchars($row['nama_siswa']) : 'Tidak Ada Data';?>
+            <?php $no = 1; 
+            while ($row = $result->fetch_assoc()) { 
+                // $nama = (!empty($row['nama_siswa'])) ? htmlspecialchars($row['nama_siswa']) : 'Tidak Ada Data';
+                $nama = htmlspecialchars($row['nama_siswa'] ?? 'Tidak Ada Data');
+                $kehadiran = htmlspecialchars($row['kehadiran'] ?? '-')
+                ?>
+                <!-- <tr>
+                    <td><?= //$no++; ?></td>
+                    <td><?= //htmlspecialchars($row['nama_siswa']); ?></td>
+                    <td><input type="radio" <?= //($row['kehadiran'] == 'Hadir') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="radio" <?= //($row['kehadiran'] == 'Alpa') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="radio" <?= //($row['kehadiran'] == 'Izin') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['kaos_kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['sabuk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['seragam'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['songkok'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['sepatu'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><input type="checkbox" <?= //($row['hasduk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                </tr> -->
                 <tr>
                     <td><?= $no++; ?></td>
-                    <td><?= htmlspecialchars($row['nama_siswa']); ?></td>
-                    <td><input type="radio" <?= ($row['kehadiran'] == 'Hadir') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="radio" <?= ($row['kehadiran'] == 'Alpa') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="radio" <?= ($row['kehadiran'] == 'Izin') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['kaos_kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['sabuk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['seragam'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['songkok'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['sepatu'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= ($row['hasduk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
+                    <td><?= $nama; ?></td>
+                    <td><?= $kehadiran; ?></td>
+                    <td><?= htmlspecialchars($row['kaos_kaki'] ?? '-'); ?></td>
+                    <td><?= htmlspecialchars($row['sabuk'] ?? '-'); ?></td>
+                    <td><?= htmlspecialchars($row['seragam'] ?? '-'); ?></td>
+                    <td><?= htmlspecialchars($row['songkok'] ?? '-'); ?></td>
+                    <td><?= htmlspecialchars($row['sepatu'] ?? '-'); ?></td>
+                    <td><?= htmlspecialchars($row['hasduk'] ?? '-'); ?></td>
                 </tr>
             <?php } ?>
         </tbody>

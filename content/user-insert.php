@@ -2,27 +2,29 @@
 if(!defined('INDEX')) die();
 
 $nama = $_POST['nama'];
-$kelas = $_POST['kelas'];
-$osis_divisi = $_POST['osis_divisi'];
-$email = $_POST['email'];
+// $kelas = $_POST['kelas'];
+// $osis_divisi = $_POST['osis_divisi'];
+// $email = $_POST['email'];
+$username = $_POST['username'];
 $password = $_POST['password'];
 
-$query = "INSERT INTO user2 SET ";
+$query = "INSERT INTO user SET ";
     $query .= "nama = '$nama', ";
-    $query .= "kelas = '$kelas', ";
-    $query .= "divisi_osis = '$osis_divisi', ";
-    $query .= "email = '$email', ";
+    // $query .= "kelas = '$kelas', ";
+    // $query .= "divisi_osis = '$osis_divisi', ";
+    // $query .= "email = '$email', ";
+    $query .= "username = '$username', ";
     $query .= "password = '$password'";
 
-    if (empty($nama) || empty($kelas) || empty($osis_divisi) || empty($email) || empty($password)) {
+    if (empty($nama)  ||  empty($username) || empty($password)) {
         die("Error: Semua kolom harus diisi.");
     }
 
-
+    $password = md5($password);
 
     // Insert data dengan Prepared Statement
-$stmt = $con->prepare("INSERT INTO user2 (nama, kelas, email, password, divisi_osis) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("sssss", $nama, $kelas, $email, $password, $osis_divisi);
+$stmt = $con->prepare("INSERT INTO user (nama_lengkap, username, password) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $nama, $username, $password);
 
 if ($stmt->execute()) {
     echo "Data siswa berhasil disimpan!";

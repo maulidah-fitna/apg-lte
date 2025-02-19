@@ -170,7 +170,7 @@
 
           <div class="box box-info">
     <div class="box-header with-border">
-        <h3 class="box-title">Tambah Siswa</h3>
+        <h3 class="box-title">Tambah User</h3>
     </div>
     <!-- /.box-header -->
     
@@ -186,7 +186,7 @@
             </div>
 
             <!-- Kelas -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="kelas" class="col-sm-2 control-label">Kelas</label>
                 <div class="col-sm-10">
                     <select name="kelas" id="kelas" class="form-control" required>
@@ -199,13 +199,21 @@
                         <option value="12 PBS">12 PBS</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
 
             <!-- email -->
-            <div class="form-group">
-                <label for="nis" class="col-sm-2 control-label">Email</label>
+            <!-- <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
                     <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email" required>
+                </div>
+            </div> -->
+
+            <!-- username -->
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
                 </div>
             </div>
 
@@ -218,11 +226,11 @@
             </div>
 
             <!-- Kelas -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="kelas" class="col-sm-2 control-label">Kelas</label>
                 <div class="col-sm-10">
                     <select name="osis_divisi" id="osis_divisi" class="form-control" required>
-                        <option value="">- Pilih Jabatan Osis -</option>
+                        <option value=""> - Pilih Jabatan Osis - </option>
                         <option value="Ketua">Ketua</option>
                         <option value="Wakil">Wakil</option>
                         <option value="Sekretaris">Sekretaris</option>
@@ -230,17 +238,17 @@
                         <option value="Pendidikan">Pendidikan</option>
                         <option value="Keamanan">Keamanan</option>
                         <option value="Perlengkapan">Perlengkapan</option>
-                        <option value="Bisnis Kreatif">Bsnif Kreatif</option>
+                        <option value="Bisnis Kreatif">Bisnis Kreatif</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <!-- /.box-body -->
 
         <!-- Tombol Submit -->
         <div class="box-footer">
-            <button type="button" class="btn btn-default button-back" onclick="goBack()">Batal</button>
+            <button type="button" class="btn btn-default" onclick="goBack()">Batal</button>
             <input type="submit" value="Simpan" class="btn btn-primary">
         </div>
         <!-- /.box-footer -->

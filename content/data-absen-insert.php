@@ -1,4 +1,4 @@
- <?php
+<?php
 if(!defined('INDEX')) die();
 
 var_dump($_POST);
@@ -16,19 +16,22 @@ $query = "SELECT nama_siswa FROM data_siswa";
 // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
 // $query .= "ORDER BY pegawai.id_jabatan DESC";
 $result = mysqli_query($con, $query);
-
 $data = mysqli_fetch_assoc($result);
-
+$nama = $data['nama_siswa'] ?? '';
 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = $data;
+    if (!isset($_POST['kehadiran']) || empty($_POST['kehadiran'])) {
+        die("Error: Harap pilih kehadiran!");
+    }
     // $kehadiran = $_POST['kehadiran']; // Radio button (Hadir, Alpa, Izin)
     
     $kehadiran = is_array($_POST['kehadiran']) ? implode(", ", $_POST['kehadiran']) : $_POST['kehadiran'];
+    $allowed_kehadiran = ['Hadir', 'Alpa', 'Izin'];
 
-
+    if (!in_array($kehadiran, $allowed_kehadiran)) {
+        die("Error: Nilai kehadiran tidak valid!");
 
     // Checkbox (jika tidak dicentang, nilai tidak dikirim, maka kita set defaultnya '-')
     // $atribut = [
@@ -40,14 +43,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //     'hasduk' => isset($_POST['hasduk']) ? 'Lengkap' : '-',
     // ];
 
+    // $atribut = [
+    //     'kaos_kaki' => in_array('kaos_kaki', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    //     'sabuk' => in_array('sabuk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    //     'seragam' => in_array('seragam', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    //     'songkok' => in_array('songkok', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    //     'sepatu' => in_array('sepatu', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    //     'hasduk' => in_array('hasduk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    // ];
+
+
     $atribut = [
-        'kaos_kaki' => in_array('kaos_kaki', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-        'sabuk' => in_array('sabuk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-        'seragam' => in_array('seragam', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-        'songkok' => in_array('songkok', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-        'sepatu' => in_array('sepatu', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-        'hasduk' => in_array('hasduk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
-    ];
+    'kaos_kaki' => in_array('kaos_kaki', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    'sabuk' => in_array('sabuk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    'seragam' => in_array('seragam', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    'songkok' => in_array('songkok', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    'sepatu' => in_array('sepatu', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+    'hasduk' => in_array('hasduk', $_POST['atribut'] ?? []) ? 'Lengkap' : '-',
+];
+
 
     // Query untuk memasukkan data ke dalam database
     // $sql = "INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk) 
@@ -63,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = is_array($data) ? implode(", ", $data) : $data;
     $kehadiran = is_array($_POST['kehadiran']) ? implode(", ", $_POST['kehadiran']) : $_POST['kehadiran'];
 
-    $stmt = $con->prepare("INSERT INTO data_rekap (nama_siswa, kehadiran, `kaos_kaki`, sabuk, seragam, songkok, sepatu, hasduk) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $con->prepare("INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssssss", 
 $nama, $kehadiran, 
 $atribut['kaos_kaki'], $atribut['sabuk'], $atribut['seragam'], 
@@ -85,6 +99,7 @@ $atribut['songkok'], $atribut['sepatu'], $atribut['hasduk']
 
     $stmt->close();
     $con->close();
+}
 }
 ?>
 
@@ -222,3 +237,4 @@ $atribut['songkok'], $atribut['sepatu'], $atribut['hasduk']
 //     }
 // } //else {
 //     echo "Form tidak dikirim dengan metode POST."; -->
+      

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Landing page untuk produk Anda.">
-    <title>Landing Page Produk Kami</title>
+    <meta name="description" content="Landing page APPASI.">
+    <title>Landing Page | APPASI</title>
     <style>
         * {
             margin: 0;
@@ -50,6 +50,7 @@
             font-size: 18px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
         .custom-button:hover {
@@ -438,7 +439,7 @@
     <div class="halo-text">
         <h2>Inovasi yang Membantu Proses Absensi Anda</h2>
         <p>dapat menyimpan database absensi siswa secara aman dan evisien, komprehensif untuk seluruh siswa,serta mudah dalam perekapan data kehadiran selama tahun ajaran berjalan.</p>
-        <a href="#cta" class="cta-button">Sign in</a>
+        <a href="?hal=login" class="cta-button">Sign in</a>
     </div>
     <img src="images/absen.png" alt="absen">
 </section>
@@ -522,7 +523,7 @@
     <h2>Cara Menggunakan Aplikasi</h2>
     <p>kami juga menyediakan panduan penggunaan aplikasi untuk mempermudah pengguna dalam menggunakan aplikasi ini.</p>   
     <div class="button-container">
-    <a href="#" class="button">Pelajari Lebih Lanjut</a>
+    <a target="blank" href="https://alfachree.github.io/Appasi/" class="button">Pelajari Lebih Lanjut</a>
   </div>
 </div>
 </section>

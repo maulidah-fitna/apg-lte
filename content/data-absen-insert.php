@@ -43,9 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Query untuk menyimpan data
-        $stmt = $con->prepare("INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk, atribut) 
-                               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $atribut_str = implode(", ", $atribut);
+        $stmt = $con->prepare("INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk, atribut, tanggal_input) 
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");        $atribut_str = implode(", ", $atribut);
         $stmt->bind_param("ssiiiiiss", $nama_siswa, $kehadiran, $kaos_kaki, $sabuk, $seragam, $songkok, $sepatu, $hasduk, $atribut_str);
 
 
@@ -108,7 +107,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     // $con->close();
 }
+
 }
+
+$sql_move = "INSERT INTO rekap_tahunan (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk, atribut, tanggal_input)
+             SELECT nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, songkok, sepatu, hasduk, atribut, tanggal_input 
+             FROM data_rekap 
+             WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
+
+$con->query($sql_move);
+
+// 2. Hapus data yang sudah dipindahkan
+$sql_delete = "DELETE FROM data_rekap WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
+$con->query($sql_delete);
+
+echo "Data lebih dari 24 jam telah dipindahkan dan direset!";
 ?>
 
 <!--  

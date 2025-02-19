@@ -4,7 +4,7 @@ if(!defined('INDEX')) die();
 // $query = "SELECT * FROM data_rekap";
 // $result = mysqli_query($con, $query);
 
-$query = "SELECT * FROM data_rekap";
+$query = "SELECT * FROM data_rekap WHERE DATE(tanggal_input) = CURDATE()";
 $result = mysqli_query($con, $query);
 
 if (!$result) {
@@ -37,6 +37,7 @@ if (!$result) {
                 // $nama = (!empty($row['nama_siswa'])) ? htmlspecialchars($row['nama_siswa']) : 'Tidak Ada Data';
                 $nama = htmlspecialchars($row['nama_siswa'] ?? 'Tidak Ada Data');
                 $kehadiran = htmlspecialchars($row['kehadiran'] ?? '-')
+                $tanggal = htmlspecialchars($row['tanggal_input'] ?? '-')
                 ?>
 
                 <tr>
@@ -49,6 +50,7 @@ if (!$result) {
                     <td><?= htmlspecialchars($row['songkok'] ?? '-'); ?></td>
                     <td><?= htmlspecialchars($row['sepatu'] ?? '-'); ?></td>
                     <td><?= htmlspecialchars($row['hasduk'] ?? '-'); ?></td>
+                    <td><?=$tanggal?></td>
                     <td>
                         <a href="?hal=data-rekap-edit&nama=<?=$data['nama_siswa']?>" class="btn btn-block btn-warning">Edit</a>
                         <a href="?hal=data-rekap-hapus&nama=<?=$nama?>" class="btn btn-block btn-danger">Hapus</a>

@@ -2,6 +2,7 @@
     if(!defined('INDEX')) die();
 
     $jsiswa = mysqli_num_rows(mysqli_query($con, "select * from data_siswa"));
+    $hsiswa = mysqli_query($con, "select * from data_rekap where kehadiran='hadir'")
 ?>
 <!-- <head>
     <link rel="stylesheet" href="style.css">
@@ -78,7 +79,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px"></sup></h3>
+              <h3><?=$hsiswa?><sup style="font-size: 20px"></sup></h3>
 
               <p>Hadir</p>
             </div>

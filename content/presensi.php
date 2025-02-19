@@ -100,20 +100,19 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                                 <td><input type="checkbox" name="sepatu" checked></td>
                                 <td><input type="checkbox" name="hasduk" checked></td>
                             </tr> -->
-          <tr>
-            <td><?= $no ?></td>
-            <td><?= $data['nama_siswa'] ?></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>
-
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="kaos-kaki" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sabuk" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="seragam" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="songkok" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sepatu" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="hasduk" checked></td>
-        </tr>
+                            <tr>
+    <td><?= $no ?></td>
+    <td><?= $data['nama_siswa'] ?>
+        <input type="hidden" name="nama_siswa[<?= $no ?>]" value="<?= $data['nama_siswa'] ?>">
+    </td>
+    <td><input type="radio" name="kehadiran[<?= $no ?>]" value="hadir"></td>
+    <td><input type="radio" name="kehadiran[<?= $no ?>]" value="alpa"></td>
+    <td><input type="radio" name="kehadiran[<?= $no ?>]" value="izin"></td>
+    <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="kaos_kaki" checked></td>
+    <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="seragam" checked></td>
+    <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="sepatu" checked></td>
+    <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="hasduk" checked></td>
+</tr>
 
 <?php
     }

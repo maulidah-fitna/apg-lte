@@ -27,6 +27,7 @@ if (!$result) {
                 <th>Songkok</th>
                 <th>Sepatu</th>
                 <th>Hasduk</th>
+                <th>Aksi</th>
             </tr>
             </tr>
         </thead>
@@ -37,19 +38,7 @@ if (!$result) {
                 $nama = htmlspecialchars($row['nama_siswa'] ?? 'Tidak Ada Data');
                 $kehadiran = htmlspecialchars($row['kehadiran'] ?? '-')
                 ?>
-                <!-- <tr>
-                    <td><?= //$no++; ?></td>
-                    <td><?= //htmlspecialchars($row['nama_siswa']); ?></td>
-                    <td><input type="radio" <?= //($row['kehadiran'] == 'Hadir') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="radio" <?= //($row['kehadiran'] == 'Alpa') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="radio" <?= //($row['kehadiran'] == 'Izin') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['kaos_kaki'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['sabuk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['seragam'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['songkok'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['sepatu'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                    <td><input type="checkbox" <?= //($row['hasduk'] == 'Lengkap') ? 'checked' : ''; ?> disabled></td>
-                </tr> -->
+
                 <tr>
                     <td><?= $no++; ?></td>
                     <td><?= $nama; ?></td>
@@ -60,6 +49,10 @@ if (!$result) {
                     <td><?= htmlspecialchars($row['songkok'] ?? '-'); ?></td>
                     <td><?= htmlspecialchars($row['sepatu'] ?? '-'); ?></td>
                     <td><?= htmlspecialchars($row['hasduk'] ?? '-'); ?></td>
+                    <td>
+                        <a href="?hal=data-rekap-edit&nama=<?=$data['nama_siswa']?>" class="btn btn-block btn-warning">Edit</a>
+                        <a href="?hal=data-rekap-hapus&nama=<?=$nama?>" class="btn btn-block btn-danger">Hapus</a>
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>

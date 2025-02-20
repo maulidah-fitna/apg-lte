@@ -38,46 +38,6 @@ if ($stmt->execute()) {
 // Tutup statement dan koneksi database
 $stmt->close();
 $con->close();
-
-
-
-
-// $query = "INSERT INTO data_siswa VALUES ";
-// $query .= "nis = '$nis', ";
-// $query .= "nama_siswa = '$nama', ";
-// $query .= "kelas = $kelas, ";
-// $query .= "jurusan = '$jurusan', ";
-// $query .= "gender = '$gender'";
-
-// $stmt = $con->prepare("INSERT INTO data_siswa (nis, nama_siswa, kelas, jurusan, gender) VALUES (?, ?, ?, ?, ?)");
-// $stmt->bind_param("sssss", $nis, $nama, $kelas, $jurusan, $gender);
-
-// if ($stmt->execute()) {
-//     echo "Data siswa berhasil disimpan!";
-// } else {
-//     echo "ERROR: " . $stmt->error;
-// }
-
-// $result = mysqli_stmt($con, $stmt);
-// echo "query: ". $query;
-
-
-// if($error != "") {
-//     echo $error;
-//     echo "<meta http-equiv='refresh' content='0; url=?hal=tambah-siswa'>";
-// }elseif($query) {
-//     echo "berhasil disimpan"
-//     echo "<meta http-equiv='refresh' content='1; url=?hal=tambah-siswa'>";
-// }else{
-//     echo mysqli_error();
-// }
-
-// if(mysqli_query($con, $query)) {
-//     echo "Data siswa berhasil disimpan!";
-// }else{
-//     echo "ERROR: " . $query . "<br>" . mysqli_error($con);
-// }
-// }
 ?>
 
 

@@ -16,9 +16,7 @@
 
 
 -- Dumping database structure for appasi
-DROP DATABASE IF EXISTS `appasi`;
-CREATE DATABASE IF NOT EXISTS `appasi` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `appasi`;
+
 
 -- Dumping structure for table appasi.data_rekap
 DROP TABLE IF EXISTS `data_rekap`;

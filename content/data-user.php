@@ -24,7 +24,6 @@
                             $no = 0;
                             
                             while($data = mysqli_fetch_assoc($result)){
-                            // while($data = mysqli_fetch_assoc(mysqli_query($con, "SELECT * FROM data_siswa"))) {
                                 $no++;
                             ?>
                             <tr>

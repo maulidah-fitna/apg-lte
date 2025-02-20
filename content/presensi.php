@@ -1,10 +1,4 @@
-<head>
-<!-- <link rel="stylesheet" href="style-btn.css"> -->
-</head>
 <?php
-// $j = $_GET['j'];
-// $k = $_GET['k'];
-// $g = $_GET['g']
 
 $j = htmlspecialchars($_GET['j'] ?? '');
 $k = htmlspecialchars($_GET['k'] ?? '');
@@ -13,7 +7,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
 
 <button class="btn  btn-primary" onclick="goBack()">Kembali</button> 
             <script>
-        // Fungsi untuk kembali ke halaman sebelumnya
         function goBack() {
             window.history.back();
         }
@@ -27,19 +20,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
             <div class="box-header">
               <h3 class="box-title">Absensi</h3>
             </div>
-            <!-- /.box-header -->
-
-            <!-- <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                        </button>
-                        </span>
-                </div>
-            </form> -->
-
-
 
             <form action="?hal=data-absen-insert" method="post">
              <div class="box-body">
@@ -47,8 +27,8 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                 <div class="overflow auto">
               <table id="example2" class="table table-bordered table-hover table-responsive table-sm table-stripped">
                 <?php
-                if($_GET['g']=='l') {
-                    $no = 1;
+                // if($_GET['g']=='l') {
+                //     $no = 1;
                 ?>
                 <thead>
                     <th>No</th>
@@ -60,7 +40,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                     <th>Kaos Kaki</th>
                     <th>Sabuk</th>
                     <th>Seragam</th>
-                    <th>Songkok</th>
                     <th>Sepatu</th>
                     <th>Hasduk</th>
                 </thead>
@@ -68,9 +47,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                 
                 <?php
                         $query = "SELECT * FROM data_siswa WHERE kelas='$k' && jurusan='$j' && gender='$g'";
-                        // $query .= "LEFT JOIN data-absen ";
-                        // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
-                        // $query .= "ORDER BY pegawai.id_jabatan DESC";
                         $result = mysqli_query($con, $query);
                         $no = 0;
 
@@ -78,28 +54,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                             $no++;
                         ?>
 
-                <!-- <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr> -->
-
-                <!-- <tr>
-                                <td><?=$no?></td>
-                                <td><?=$data['nama_siswa']?></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
-                                <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>                                
-                                
-                                <td><input type="checkbox" name="kaos-kaki" checked></td>
-                                <td><input type="checkbox" name="sabuk" checked></td>
-                                <td><input type="checkbox" name="seragam" checked></td>
-                                <td><input type="checkbox" name="songkok" checked></td>
-                                <td><input type="checkbox" name="sepatu" checked></td>
-                                <td><input type="checkbox" name="hasduk" checked></td>
-                            </tr> -->
                             <tr>
     <td><?= $no ?></td>
     <td><?= $data['nama_siswa'] ?>
@@ -109,6 +63,7 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     <td><input type="radio" name="kehadiran[<?= $no ?>]" value="alpa"></td>
     <td><input type="radio" name="kehadiran[<?= $no ?>]" value="izin"></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="kaos_kaki" checked></td>
+    <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="sabuk" checked></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="seragam" checked></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="sepatu" checked></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="hasduk" checked></td>
@@ -116,10 +71,11 @@ $g = htmlspecialchars($_GET['g'] ?? '');
 
 <?php
     }
-}else{
-    $no = 1;
-?>
 
+//else{
+//     $no = 1;
+?>
+<!-- 
 <thead>
                     <th>No</th>
                     <th>Nama</th>
@@ -134,19 +90,16 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                     <th>Pin</th>
                 </thead>
                 <tbody>
-                
+                 -->
                 <?php
-                        $query = "SELECT * FROM data_siswa WHERE kelas='$k' && jurusan='$j' && gender='$g'";
-                        // $query .= "LEFT JOIN data-absen ";
-                        // $query .= "ON pegawai.id_jabatan = jabatan.id_jabatan ";
-                        // $query .= "ORDER BY pegawai.id_jabatan DESC";
-                        $result = mysqli_query($con, $query);
-                        $no = 0;
+                        // $query = "SELECT * FROM data_siswa WHERE kelas='$k' && jurusan='$j' && gender='$g'";
+                        // $result = mysqli_query($con, $query);
+                        // $no = 0;
 
-                        while($data = mysqli_fetch_assoc($result)) {
-                            $no++;
+                        // while($data = mysqli_fetch_assoc($result)) {
+                        //     $no++;
                         ?>
-          <tr>
+          <!-- <tr>
             <td><?= $no ?></td>
             <td><?= $data['nama_siswa'] ?></td>
             <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
@@ -158,11 +111,11 @@ $g = htmlspecialchars($_GET['g'] ?? '');
             <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sepatu" checked></td>
             <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="hasduk" checked></td>
             <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="pin" checked></td>
-        </tr>
+        </tr> -->
 
 <?php
-}
-}
+// }
+// }
 ?>
                 </tbody>
                 
@@ -175,30 +128,12 @@ $g = htmlspecialchars($_GET['g'] ?? '');
             </form>
             </div>
 
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
 
             </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
         </div>
         </div>
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </section>
-
-
-
-
-
-
-            <?php
-                    // if($_GET['g']=='p') { ?>
-                    <!-- //  <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="hasduk" checked></td> -->
-                     <?php    
-                    // }
-                    ?>

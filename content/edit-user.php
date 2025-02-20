@@ -34,8 +34,7 @@ $data = mysqli_fetch_assoc($result);
     <div class="form-group">
                 <label for="password" class="col-sm-2 control-label">Password</label>
                 <div class="col-sm-10">
-            <input type="password" name="password" id="password" class="form-control" value="<?=$data['password']?>"><br>
-            <span class="input-group-append" id="togglePassword" style="cursor: pointer;">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Kosongkan jika tidak ingin mengubah password"><br>            <span class="input-group-append" id="togglePassword" style="cursor: pointer;">
                 <span class="input-group-text"><i class="fa fa-eye"></i></span> <!-- Ikon mata di kanan -->
             </span>  
         </div>

@@ -33,11 +33,11 @@ $data = mysqli_fetch_assoc($result);
                 <option value=""> - Pilih Kelas - </option>
 
 <?php
-$queryj = "SELECT * FROM data_siswa ";
+$queryj = "SELECT DISTINCT kelas FROM data_siswa";
 $resultj = mysqli_query($con, $queryj);
 while($j = mysqli_fetch_assoc($resultj)) {
-    echo "<option value='$j[nis]'";
-    if($j['nis'] == $data['nis']) echo " selected";
+    echo "<option value='$j[kelas]'";
+    if($j['kelas'] == $data['kelas']) echo " selected";
     echo "> $j[kelas] </option>";
 }
 ?>
@@ -52,11 +52,11 @@ while($j = mysqli_fetch_assoc($resultj)) {
                 <option value=""> - Pilih Jurusan - </option>
 
 <?php
-$queryj = "SELECT * FROM data_siswa ";
+$queryj = "SELECT DISTINCT jurusan FROM data_siswa";
 $resultj = mysqli_query($con, $queryj);
 while($j = mysqli_fetch_assoc($resultj)) {
-    echo "<option value='$j[nis]'";
-    if($j['nis'] == $data['nis']) echo " selected";
+    echo "<option value='$j[jurusan]'";
+    if($j['jurusan'] == $data['jurusan']) echo " selected";
     echo "> $j[jurusan] </option>";
 }
 ?>

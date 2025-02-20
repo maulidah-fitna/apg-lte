@@ -439,14 +439,14 @@
     <div class="halo-text">
         <h2>Inovasi yang Membantu Proses Absensi Anda</h2>
         <p>dapat menyimpan database absensi siswa secara aman dan evisien, komprehensif untuk seluruh siswa,serta mudah dalam perekapan data kehadiran selama tahun ajaran berjalan.</p>
-        <a href="?hal=login" class="cta-button">Sign in</a>
+        <a href="login.php" class="cta-button">Sign in</a>
     </div>
     <img src="images/absen.png" alt="absen">
 </section>
 
 <section id="features"  class="features">
     <h2>Fitur Utama </h2>
-    <p>kami juga memiliki beberapa fitur utama.</p>
+    <p>Kami juga memiliki beberapa fitur utama:</p>
     <div class="feature-items">
         <div class="feature-item">
             <h3>Rekab Otomatis</h3>
@@ -474,11 +474,11 @@
     <div class="testimonial-slider">
         <div class="testimonial">
             <p>" ini benar-benar membantu kami mengabsen lebih cepat dan efisien. Kami sangat puas!"</p>
-            <h3>Dwi Ratna. S Kom</h3>
+            <h3>Dwi Ratna, S.Kom</h3>
         </div>
         <div class="testimonial">
             <p>"Sangat mudah digunakan dan memiliki fitur luar biasa. Ini sangat menguntungkan bagi Sekolah kami."</p>
-            <h3> Ipnu Masyaid.S Kom</h3>
+            <h3> Ipnu Masyaid, S.Kom</h3>
         </div>
     </div>
 </section>

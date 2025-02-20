@@ -30,9 +30,9 @@ $stmt = $con->prepare("INSERT INTO data_siswa (nis, nama_siswa, kelas, jurusan, 
 $stmt->bind_param("sssss", $nis, $nama, $kelas, $jurusan, $gender);
 
 if ($stmt->execute()) {
-    echo "Data siswa berhasil disimpan!";
+    echo "<script>alert('Data Berhasil Ditambah!'); window.location.href='?hal=data-siswa';</script>";
 } else {
-    echo "ERROR: " . $stmt->error;
+    echo "<script>alert('Gagal menambah data: " . mysqli_error($con) . "');</script>";
 }
 
 // Tutup statement dan koneksi database

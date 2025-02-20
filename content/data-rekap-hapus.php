@@ -1,16 +1,20 @@
 <?php
 if(!defined('INDEX')) die();
 
-$id = $_GET['nama'];
+if (isset($_GET['id'])) {
+    
 
-$query = "DELETE FROM data_rekap WHERE nama_siswa = '$id'";
-$result = mysqli_query($con, $query);
+    $id = $_GET['id'];
 
-if($result) {
-    echo "Data Berhasil Dihapus!";
-    echo "<meta http-equiv='refresh' content='1, url=?hal=data-rekap'>";
-}else{
-    echo "Tidak Dapat Menghapus Data!<br>";
-    echo mysqli_error();
+    $query = "DELETE FROM data_rekap WHERE id = '$id'";
+    $result = mysqli_query($con, $query);
+
+    if ($result) {
+        echo "<script>alert('Data Berhasil Dihapus!'); window.location.href='?hal=data-rekap';</script>";
+    } else {
+        echo "<script>alert('Gagal menghapus data: " . mysqli_error($con) . "');</script>";
+    }
+} else {
+    echo "<script>alert('Parameter nama tidak ditemukan!');</script>";
 }
 ?>

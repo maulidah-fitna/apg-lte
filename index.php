@@ -188,8 +188,8 @@ desired effect
   $(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': true,
+      'paging'      : false,
+      'lengthChange': false,
       'searching'   : true,
       'ordering'    : false,
       'info'        : true,

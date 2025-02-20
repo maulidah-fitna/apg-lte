@@ -3,7 +3,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                <h3 class="box-title">Data Siswa</h3>
+                <h2 >Data Siswa</h2>
                 </div>
                 <div class="box-body">
                 <div><a href="?hal=tambah-siswa" class="btn  btn-primary">Tambah</a></div><br>

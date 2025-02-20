@@ -27,9 +27,9 @@ $stmt = $con->prepare("INSERT INTO user (nama_lengkap, username, password) VALUE
 $stmt->bind_param("sss", $nama, $username, $password);
 
 if ($stmt->execute()) {
-    echo "Data siswa berhasil disimpan!";
+    echo "<script>alert('Data Berhasil Ditambah!'); window.location.href='?hal=data-user';</script>";
 } else {
-    echo "ERROR: " . $stmt->error;
+    echo "<script>alert('Gagal menambah data: " . mysqli_error($con) . "');</script>";
 }
 
 // Tutup statement dan koneksi database

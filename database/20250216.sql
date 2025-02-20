@@ -33,17 +33,28 @@ CREATE TABLE IF NOT EXISTS `data_rekap` (
   `sepatu` varchar(50) DEFAULT NULL,
   `hasduk` varchar(50) DEFAULT NULL,
   `atribut` text,
+  `tanggal_input` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=358 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table appasi.data_rekap: ~5 rows (approximately)
+-- Dumping data for table appasi.data_rekap: ~17 rows (approximately)
 DELETE FROM `data_rekap`;
-INSERT INTO `data_rekap` (`id`, `nama_siswa`, `kehadiran`, `kaos_kaki`, `sabuk`, `seragam`, `songkok`, `sepatu`, `hasduk`, `atribut`) VALUES
-	(11, NULL, 'hadir', '', NULL, NULL, NULL, NULL, NULL, 'kaos-kaki, sabuk, seragam, songkok, sepatu, hasduk'),
-	(12, NULL, 'alpa', '', NULL, NULL, NULL, NULL, NULL, 'kaos-kaki, sabuk, seragam, songkok, sepatu, hasduk'),
-	(13, NULL, 'hadir', '', NULL, NULL, NULL, NULL, NULL, 'kaos-kaki, sabuk, seragam, songkok, sepatu, hasduk'),
-	(14, NULL, 'hadir', '', NULL, NULL, NULL, NULL, NULL, 'kaos-kaki, sabuk, seragam, songkok, sepatu, hasduk'),
-	(15, NULL, 'hadir', '', NULL, NULL, NULL, NULL, NULL, 'kaos-kaki, sabuk, seragam, songkok, sepatu, hasduk');
+INSERT INTO `data_rekap` (`id`, `nama_siswa`, `kehadiran`, `kaos_kaki`, `sabuk`, `seragam`, `songkok`, `sepatu`, `hasduk`, `atribut`, `tanggal_input`) VALUES
+	(343, 'Abdillah Aziz', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:36:18'),
+	(344, 'Abdillah Aziz', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:37:40'),
+	(345, 'Abdillah Aziz', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:38:16'),
+	(346, 'Abdillah Aziz', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:40:13'),
+	(347, 'Aufa Ihabi', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:40:13'),
+	(348, 'M. Rofiq Fatoni', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:40:13'),
+	(349, 'Vesta Lingga Loka', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:40:13'),
+	(350, 'Anggun Khowatim', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(351, 'Aulia Fatmawati', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(352, 'Dwi Hidayatul Khoiriyah', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(353, 'Elok Nuraini', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(354, 'Maulidah Fitri Khasanah', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(355, 'Najma Faricha', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(356, 'Nayla Azkiya', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58'),
+	(357, 'Sella Ayunia', 'hadir', '1', '1', '1', NULL, '1', '1', 'kaos_kaki, sabuk, seragam, sepatu, hasduk', '2025-02-20 04:41:58');
 
 -- Dumping structure for table appasi.data_siswa
 DROP TABLE IF EXISTS `data_siswa`;
@@ -56,13 +67,10 @@ CREATE TABLE IF NOT EXISTS `data_siswa` (
   PRIMARY KEY (`nis`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table appasi.data_siswa: ~137 rows (approximately)
+-- Dumping data for table appasi.data_siswa: ~133 rows (approximately)
 DELETE FROM `data_siswa`;
 INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VALUES
-	('0001', 'nana', 10, 'PPLG', 'p'),
-	('0002', 'nini', 10, 'PPLG', 'p'),
-	('0003', 'na', 10, 'PPLG', 'p'),
-	('0006', 'nai', 12, 'RPL', 'p'),
+	('000', 'ff', 12, 'RPL', 'p'),
 	('178/117.065', 'Ahmad Daffa Al Burhani', 12, 'RPL', 'l'),
 	('180/119.065', 'Annisa Hayu Istiqomah', 12, 'RPL', 'p'),
 	('181/120.065', 'Anggi Suhetiani', 12, 'RPL', 'p'),
@@ -108,12 +116,12 @@ INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VAL
 	('227/011.21', 'Elok Nuraini', 11, 'RPL', 'p'),
 	('228/012.21', 'Faathir Al-A\'Raaffi Arby', 11, 'RPL', 'l'),
 	('229/013.21', 'Faruq Arzaky Nuryandino', 11, 'RPL', 'l'),
-	('230/014.21', 'Indra Muhamad Wakhibul Qohar', 11, 'RPL', 'l'),
+	('230/014.21', 'Indra Muhamad W. Q.', 11, 'RPL', 'l'),
 	('232/016.21', 'Kevin Azriel Hartanto', 11, 'RPL', 'l'),
 	('233/017.21', 'M. Fahrur Rozi', 11, 'RPL', 'l'),
 	('234/018.21', 'M. Fauzi Afandi', 11, 'RPL', 'l'),
 	('235/019.21', 'Maulidah Fitri Khasanah', 11, 'RPL', 'p'),
-	('236/020.21', 'Mohammad Fadhil Al-Fakhri', 11, 'RPL', 'l'),
+	('236/020.21', 'Mohammad Fadhil A.', 11, 'RPL', 'l'),
 	('237/021.21', 'M. Dihya Al Qolbi', 11, 'RPL', 'l'),
 	('238/022.21', 'M. Fatih Fuady', 11, 'RPL', 'l'),
 	('239/023.21', 'Najma Faricha', 11, 'RPL', 'p'),
@@ -122,10 +130,10 @@ INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VAL
 	('242/026.21', 'Raafi Hafidz Wardono', 11, 'RPL', 'l'),
 	('243/027.21', 'Rangga Aji Pratama', 11, 'RPL', 'l'),
 	('244/028.21', 'Rizky Alif Khoirul Anam', 11, 'RPL', 'l'),
-	('245/029.21', 'Sholihin Ilham Nur Ridhwan', 11, 'RPL', 'l'),
+	('245/029.21', 'Sholihin Ilham Nur R.', 11, 'RPL', 'l'),
 	('247/001.39', 'Abdillah Aziz', 11, 'LPS', 'l'),
 	('249/003.39', 'Alfina Tryanor Fandhini', 11, 'LPS', 'p'),
-	('250/004.39', 'Anggun Tyas Ayu Ramadhani', 11, 'LPS', 'p'),
+	('250/004.39', 'Anggun Tyas Ayu R.', 11, 'LPS', 'p'),
 	('251/005.39', 'Aufa Ihabi', 11, 'LPS', 'l'),
 	('252/006.39', 'Aulia Rivya', 11, 'LPS', 'p'),
 	('253/007.39', 'Azizatun Nafi\'ah', 11, 'LPS', 'p'),
@@ -140,35 +148,35 @@ INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VAL
 	('265/019.39', 'Amalizatul Hammi', 11, 'LPS', 'p'),
 	('266/020.39', 'Nur Mufidatul Hasanah', 11, 'LPS', 'p'),
 	('267/031.21', 'Sella Ayunia', 11, 'RPL', 'p'),
-	('268/032.21', 'Ahdiyana Fatwani Maulafia', 10, 'PPLG', 'p'),
+	('268/032.21', 'Ahdiyana Fatwani M.', 10, 'PPLG', 'p'),
 	('269/033.21', 'Ahmad Akbar T.', 10, 'PPLG', 'l'),
 	('270/034.21', 'Ahmad Hadi Mahmud', 10, 'PPLG', 'l'),
 	('271/035.21', 'Ahmad Syarifuddin', 10, 'PPLG', 'l'),
 	('272/036.21', 'Aira Surya Pratama', 10, 'PPLG', 'l'),
 	('273/037.21', 'Ambar Rohmah', 10, 'PPLG', 'p'),
 	('274/038.21', 'Arifah Nuril Mursyidah', 10, 'PPLG', 'p'),
-	('275/039.21', 'Azza Asyura Alhafizh Pramawa', 10, 'PPLG', 'p'),
+	('275/039.21', 'Azza Asyura Alhafizh P.', 10, 'PPLG', 'p'),
 	('276/040.21', 'Azzahra Salsa Bila Putri', 10, 'PPLG', 'p'),
 	('277/041.21', 'Azzahratun Nur\'aini', 10, 'PPLG', 'p'),
 	('278/042.21', 'Azzura Zahra', 10, 'PPLG', 'p'),
 	('279/043.21', 'Enggar Kirana Ramadhani', 10, 'PPLG', 'p'),
-	('280/044.21', 'Erlangga Alviant Pratama El-Badr', 10, 'PPLG', 'l'),
+	('280/044.21', 'Erlangga Alviant P. E.', 10, 'PPLG', 'l'),
 	('281/045.21', 'Fadhil Nur Faiz', 10, 'PPLG', 'l'),
 	('282/046.21', 'Faizatul Alya', 10, 'PPLG', 'p'),
-	('283/047.21', 'Izna Ayudestika Munawaroh', 10, 'PPLG', 'p'),
+	('283/047.21', 'Izna Ayudestika M.', 10, 'PPLG', 'p'),
 	('284/048.21', 'Luthfia Zalfa Ardisyaputri', 10, 'PPLG', 'p'),
 	('285/049.21', 'M Davin Berliano', 10, 'PPLG', 'l'),
 	('286/050.21', 'Mega Alya Putri', 10, 'PPLG', 'p'),
-	('287/051.21', 'Megananda Cristal Maliha Syisyoria S.', 10, 'PPLG', 'p'),
-	('288/052.21', 'Meytta Putri Nabila Gusti', 10, 'PPLG', 'p'),
+	('287/051.21', 'Megananda Cristal M. S. S.', 10, 'PPLG', 'p'),
+	('288/052.21', 'Meytta Putri Nabila G.', 10, 'PPLG', 'p'),
 	('289/053.21', 'Muflihatuddaroini', 10, 'PPLG', 'p'),
-	('290/054.21', 'M. Fathir Rizky Abdillah', 10, 'PPLG', 'l'),
+	('290/054.21', 'M. Fathir Rizky A.', 10, 'PPLG', 'l'),
 	('291/055.21', 'M. Ilham Musyaffa\'', 10, 'PPLG', 'l'),
-	('292/056.21', 'M. Raihan Fuad Fakhrurrozi', 10, 'PPLG', 'l'),
+	('292/056.21', 'M. Raihan Fuad F.', 10, 'PPLG', 'l'),
 	('293/057.21', 'M. Shalman Alfarizzi', 10, 'PPLG', 'l'),
 	('294/058.21', 'Nazhifah', 10, 'PPLG', 'p'),
 	('296/060.21', 'Nur Fauziah Eli Melsy', 10, 'PPLG', 'p'),
-	('297/061.21', 'Putri Agusti Nailaturrohmah', 10, 'PPLG', 'p'),
+	('297/061.21', 'Putri Agusti N.', 10, 'PPLG', 'p'),
 	('298/062.21', 'Reyfaldo Maulana Rosyid', 10, 'PPLG', 'l'),
 	('299/063.21', 'Rizky Andriano', 10, 'PPLG', 'l'),
 	('300/064.21', 'Shobibar Ridlwan', 10, 'PPLG', 'l'),
@@ -178,7 +186,7 @@ INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VAL
 	('305/069.21', 'Yanuharti Widhi Astuti', 10, 'PPLG', 'p'),
 	('306/070.21', 'Yoshi Arwan Zullathiif', 10, 'PPLG', 'l'),
 	('308/022.39', 'Azkya Aulia Maghfirany', 10, 'AKL', 'p'),
-	('309/023.39', 'Cinta Ratih Martha Ningtyas', 10, 'AKL', 'p'),
+	('309/023.39', 'Cinta Ratih Martha N.', 10, 'AKL', 'p'),
 	('310/024.39', 'Devinda Amelia', 10, 'AKL', 'p'),
 	('311/025.39', 'Enti Imroatul Jalillah', 10, 'AKL', 'p'),
 	('312/026.39', 'Fairies Yefi Angelicha', 10, 'AKL', 'p'),
@@ -194,8 +202,46 @@ INSERT INTO `data_siswa` (`nis`, `nama_siswa`, `kelas`, `jurusan`, `gender`) VAL
 	('324/038.39', 'Syarif', 10, 'AKL', 'l'),
 	('325/039.39', 'Taufiq Ilham Novianto', 10, 'AKL', 'l'),
 	('326/040.39', 'Vivi Tri Nur Andriana', 10, 'AKL', 'p'),
-	('327/041.39', 'Benny Yudha Tata Adhitama', 10, 'AKL', 'l'),
+	('327/041.39', 'Benny Yudha Tata A.', 10, 'AKL', 'l'),
 	('328/042.39', 'Veni Veliska', 10, 'AKL', 'p');
+
+-- Dumping structure for table appasi.rekap_tahunan
+DROP TABLE IF EXISTS `rekap_tahunan`;
+CREATE TABLE IF NOT EXISTS `rekap_tahunan` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_siswa` varchar(255) NOT NULL,
+  `kehadiran` enum('hadir','izin','alpa') NOT NULL,
+  `kaos_kaki` tinyint(1) DEFAULT '0',
+  `sabuk` tinyint(1) DEFAULT '0',
+  `seragam` tinyint(1) DEFAULT '0',
+  `songkok` tinyint(1) DEFAULT '0',
+  `sepatu` tinyint(1) DEFAULT '0',
+  `hasduk` tinyint(1) DEFAULT '0',
+  `atribut` text,
+  `tanggal_input` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table appasi.rekap_tahunan: ~0 rows (approximately)
+DELETE FROM `rekap_tahunan`;
+INSERT INTO `rekap_tahunan` (`id`, `nama_siswa`, `kehadiran`, `kaos_kaki`, `sabuk`, `seragam`, `songkok`, `sepatu`, `hasduk`, `atribut`, `tanggal_input`) VALUES
+	(1, 'Ahmad Akbar T.', 'hadir', 1, 0, 0, 0, 0, 0, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(2, 'Ahmad Akbar T.', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(3, 'Ahmad Akbar T.', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(4, 'Ahmad Hadi Mahmud', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(5, 'Ahmad Syarifuddin', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(6, 'Aira Surya Pratama', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(7, 'Erlangga Alviant P. E.', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(8, 'Fadhil Nur Faiz', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(9, 'M Davin Berliano', 'izin', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(10, 'M. Fathir Rizky Abdillah', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(11, 'M. Ilham Musyaffa\'', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(12, 'M. Raihan Fuad F.', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(13, 'M. Shalman Alfarizzi', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(14, 'Reyfaldo Maulana Rosyid', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(15, 'Rizky Andriano', 'alpa', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(16, 'Shobibar Ridlwan', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20'),
+	(17, 'Yoshi Arwan Zullathiif', 'hadir', 1, 1, 1, 1, 1, 1, 'kaos_kaki, seragam, sepatu, hasduk', '2025-02-20');
 
 -- Dumping structure for table appasi.siswa_putra
 DROP TABLE IF EXISTS `siswa_putra`;
@@ -285,7 +331,7 @@ CREATE TABLE IF NOT EXISTS `siswa_putri` (
   PRIMARY KEY (`nisn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table appasi.siswa_putri: ~67 rows (approximately)
+-- Dumping data for table appasi.siswa_putri: ~61 rows (approximately)
 DELETE FROM `siswa_putri`;
 INSERT INTO `siswa_putri` (`nisn`, `nama_siswa`, `kelas`, `jurusan`) VALUES
 	('180/119.065', 'Annisa Hayu Istiqomah', 12, 'RPL'),
@@ -364,13 +410,16 @@ CREATE TABLE IF NOT EXISTS `user` (
   `username` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table appasi.user: ~1 rows (approximately)
 DELETE FROM `user`;
 INSERT INTO `user` (`id_user`, `nama_lengkap`, `username`, `password`) VALUES
-	(1, 'Najma Faricha', 'admin1', '72fc58fee3f47cc53664fd4bf0110dd0'),
-	(2, 'Aulia Patema', 'admien', '6f8770590d8c6289718ec0f211a6c2cf');
+	(1, 'najma', 'admin1', 'appasi1'),
+	(2, 'fateh', 'amin', 'a688574d608c0157370e310f1c3ac202'),
+	(3, 'fateh', 'amin', '72fc58fee3f47cc53664fd4bf0110dd0'),
+	(4, 'fatehah', 'admine', '101a6ec9f938885df0a44f20458d2eb4'),
+	(5, 'Asatidzal Hakimi', 'admien', '09f1e671b183834fe326655aef940e3b');
 
 -- Dumping structure for table appasi.user2
 DROP TABLE IF EXISTS `user2`;
@@ -385,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `user2` (
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table appasi.user2: ~1 rows (approximately)
+-- Dumping data for table appasi.user2: ~0 rows (approximately)
 DELETE FROM `user2`;
 INSERT INTO `user2` (`id_user`, `nama`, `kelas`, `email`, `username`, `password`, `divisi_osis`) VALUES
 	(1, 'fateh', '11 RPL', 'najmafaricha69@gmail.com', 'admine', 'hahahaha', 'Perlengkapan');

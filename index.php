@@ -118,7 +118,11 @@ desired effect
 <script>
   $(function () {
     $('#example1').DataTable()
+<<<<<<< HEAD
     $('#data-rekap').DataTable({
+=======
+    $('#tabelrekap').DataTable({
+>>>>>>> f1574f1fd2edf685589ef5327306eb307af1562e
       'paging'      : true,
       'lengthChange': true,
       'searching'   : true,

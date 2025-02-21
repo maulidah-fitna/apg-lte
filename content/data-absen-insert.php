@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $atribut = $_POST['atribut'][$no] ?? [];
         
         // Konversi atribut ke nilai numerik
-        $kaos_kaki = in_array("kaos_kaki", $atribut) ? 1 : 0;
+        $kaos_kaki = in_array("kaos_kaki", $atribut) ? '✓' : 0;
         $sabuk = in_array("sabuk", $atribut) ? 1 : 0;
         $seragam = in_array("seragam", $atribut) ? 1 : 0;
         $sepatu = in_array("sepatu", $atribut) ? 1 : 0;

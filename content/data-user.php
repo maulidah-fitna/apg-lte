@@ -3,7 +3,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                <h3 class="box-title">Data User</h3>
+                <h1 class="box-title">Data User</h1>
                 </div>
                 <div class="box-body">
                 <div><a href="?hal=tambah-user" class="btn  btn-primary">Tambah</a></div><br>

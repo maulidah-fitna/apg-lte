@@ -78,12 +78,9 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     }
 ?>
                 </tbody>
-                
-
-                
               </table>
 </div>
-              <input type="submit" name ="submit" value="Simpan">
+              <input class="btn  btn-primary" type="submit" name ="submit" value="Simpan">
               
             </form>
             </div>

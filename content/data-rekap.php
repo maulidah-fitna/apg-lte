@@ -1,13 +1,11 @@
-
 <?php
 if (!defined('INDEX')) die();
 
 $j = htmlspecialchars($_GET['j'] ?? '');
-$k = $_GET['k'] ?? '';
+$k = htmlspecialchars($_GET['k'] ?? '');
 $g = htmlspecialchars($_GET['g'] ?? '');
 ?>
 
-<<<<<<< HEAD
 <div class="row">
     <div class="col-md-6">
         <div class="box box-info">
@@ -25,7 +23,7 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                     <div class="form-group">
                         <label for="kelas" class="col-sm-2 control-label">Kelas</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="kelas" name="kelas" required>
+                            <input type="number" class="form-control" id="kelas" name="kelas" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -47,9 +45,7 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
-                <h2 class="mt-4">Rekap Absensi <?php if (isset($_POST['tanggal'])) {
-                echo "Tanggal " . date('d/m/Y', strtotime($_POST['tanggal']));
-            }?></h2>
+                <h2 class="mt-4">Rekap Absensi <?php if(isset($_POST['kelas'])) echo "Kelas ".$_POST['kelas']; if(isset($_POST['jurusan'])) echo " ".$_POST['jurusan']; if (isset($_POST['tanggal'])) echo ", Tanggal " . date('d/m/Y', strtotime($_POST['tanggal'])); ?></h2>
                 <div class="box-body table-responsive">
                     <table id="data-rekap" class="table table-bordered table-striped">
                         <thead>
@@ -70,13 +66,10 @@ $g = htmlspecialchars($_GET['g'] ?? '');
                                 $tanggal = $_POST['tanggal'];
                                 $kelas = $_POST['kelas'];
                                 $jurusan = $_POST['jurusan'];
-                                
-                                $query = "SELECT * FROM data_rekap WHERE DATE(tanggal_input) = '$tanggal' && kelas = '$kelas' && jurusan = '$jurusan'";
+                                $query = "SELECT * FROM data_rekap WHERE DATE(tanggal_input) = '$tanggal' AND kelas = '$kelas' AND jurusan = '$jurusan'";
                                 $result = mysqli_query($con, $query);
                                 $no = 1;
-                                var_dump($result);
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                    
                             ?>
                             <tr>
                                 <td><?= $no++; ?></td>
@@ -98,85 +91,13 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     </div>
 </div>
 
-=======
-<div class="container">
-<div class="box">
-<div class="box-header">
-    <h2 class="mt-4">Rekap Absensi</h2>
-    <div class="box-body">
-    <table id="tabelrekap" class="table table-bordered table-striped">
-
-        <thead>
-            <tr>
-                
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Kehadiran</th>
-                <th>Kaos Kaki</th>
-                <th>Sabuk</th>
-                <th>Seragam</th>
-                <th>Sepatu</th>
-                <th>Hasduk</th>
-                <th>Tanggal Input</th>
-                <th>Aksi</th>
-            </tr>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $no = 1; 
-            while ($row = $result->fetch_assoc()) { 
-                $id = htmlspecialchars($row['id'] ?? '-');
-                $nama = htmlspecialchars($row['nama_siswa'] ?? 'Tidak Ada Data');
-                $kehadiran = htmlspecialchars($row['kehadiran'] ?? '-')
-
-                ?>
-
-                <tr>
-                    <td><?= $no++; ?></td>
-                    <td><?= $nama; ?>
-                    </td>
-                    <td><?= $kehadiran; ?></td>
-                    <td><?= htmlspecialchars($row['kaos_kaki'] ?? '-'); ?></td>
-                    <td><?= htmlspecialchars($row['sabuk'] ?? '-'); ?></td>
-                    <td><?= htmlspecialchars($row['seragam'] ?? '-'); ?></td>
-                    <td><?= htmlspecialchars($row['sepatu'] ?? '-'); ?></td>
-                    <td><?= htmlspecialchars($row['hasduk'] ?? '-'); ?></td>
-                    <td><?=htmlspecialchars($row['tanggal_input'] ?? '-')?></td>
-
-
-                    <td>
-                        <a href="?hal=data-rekap-hapus&id=<?=$row['id']?>" class="btn btn-block btn-danger">Hapus</a>
-                    </td>
-                </tr>
-            <?php 
-            }
-            
-
-?>
-        </tbody>
-       
-    </table>
-    </div>
-        </div>
-        </div>
-</div>
->>>>>>> f1574f1fd2edf685589ef5327306eb307af1562e
 <?php
-// $sql_move = "INSERT INTO rekap_tahunan (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input)
-// SELECT nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input 
-// FROM data_rekap 
-// WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
-<<<<<<< HEAD
-=======
+$sql_move = "INSERT INTO rekap_tahunan (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input)
+SELECT nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input 
+FROM data_rekap 
+WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
+$con->query($sql_move);
 
->>>>>>> f1574f1fd2edf685589ef5327306eb307af1562e
-// $con->query($sql_move);
-
-// $sql_delete = "DELETE FROM data_rekap WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
-// $con->query($sql_delete);
-<<<<<<< HEAD
+$sql_delete = "DELETE FROM data_rekap WHERE tanggal_input < NOW() - INTERVAL 1 DAY";
+$con->query($sql_delete);
 ?>
-=======
-?>
->>>>>>> f1574f1fd2edf685589ef5327306eb307af1562e

@@ -3,7 +3,13 @@ if(!defined('INDEX')) die("");
 ?>
 
 <section class="content">
-<span><h3>PUTRA</h3></span>
+
+<section class="content-header">
+      <h1>
+      <span><h3>PUTRA</h3></span>
+      </h1>
+</section>
+
 <div class="row">
         <div class="col-lg-6 col-xs-6">
           <!-- small box -->
@@ -87,7 +93,11 @@ if(!defined('INDEX')) die("");
         <!-- ./col -->
       </div>
 
-<span><h3>PUTRI</h3></span>
+      <section class="content-header">
+      <h1>
+      <span><h3>PUTRI</h3></span>
+      </h1>
+</section>
 <div class="row">
 <div class="col-lg-6 col-xs-6">
           <!-- small box -->

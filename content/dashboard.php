@@ -16,7 +16,7 @@
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <div class="callout callout-info">
+            <div class="alert bg-purple-active color-pallete">
                 <h4>Selamat Datang!</h4>
 
                 <p>Aplikasi ini dibuat untuk mempermudah guru dan OSIS untuk

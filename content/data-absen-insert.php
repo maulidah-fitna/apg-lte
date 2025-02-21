@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $jurusan = $_POST['jurusan'][$no] ?? '';
         $atribut = $_POST['atribut'][$no] ?? [];
         
-        // Konversi atribut ke nilai numerik
-        $kaos_kaki = in_array("kaos_kaki", $atribut) ? '✓' : 0;
-        $sabuk = in_array("sabuk", $atribut) ? 1 : 0;
-        $seragam = in_array("seragam", $atribut) ? 1 : 0;
-        $sepatu = in_array("sepatu", $atribut) ? 1 : 0;
-        $hasduk = in_array("hasduk", $atribut) ? 1 : 0;
+        // Konversi atribut ke nilai string
+        $kaos_kaki = in_array("kaos_kaki", $atribut) ? '✓' : '✕';
+        $sabuk = in_array("sabuk", $atribut) ? '✓' : '✕';
+        $seragam = in_array("seragam", $atribut) ? '✓' : '✕';
+        $sepatu = in_array("sepatu", $atribut) ? '✓' : '✕';
+        $hasduk = in_array("hasduk", $atribut) ? '✓' : '✕';
         $atribut_str = implode(", ", $atribut);
         
         // Query untuk menyimpan data

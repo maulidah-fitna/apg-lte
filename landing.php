@@ -265,6 +265,44 @@
             color: #666;
         }
         
+        @media (min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+                padding: 50px;
+            }
+
+            .hero-text {
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                display: none;
+                background: #333;
+                width: 100%;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 20px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
 
         /* Testimonials */
         .testimonials {
@@ -419,7 +457,7 @@
             <h1>Selamat datang di APPASI</h1>
             <p>Kelola Data Absensi Sekolah Secara Aman Dan Efisien Dengan Aplikasi Absensi.</p>
         </div>
-        <img src="images/siswa.png" alt="Ilustrasi Siswa" class="hero-image">
+        <img src="dist/img/siswa.jpg" alt="Ilustrasi Siswa" class="hero-image">
        
     </section>
     <nav class="navbar">
@@ -441,7 +479,7 @@
         <p>dapat menyimpan database absensi siswa secara aman dan evisien, komprehensif untuk seluruh siswa,serta mudah dalam perekapan data kehadiran selama tahun ajaran berjalan.</p>
         <a href="login.php" class="cta-button">Sign in</a>
     </div>
-    <img src="images/absen.png" alt="absen">
+    <img src="dist/img/apel.jpg" alt="absen">
 </section>
 
 <section id="features"  class="features">

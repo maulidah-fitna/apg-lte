@@ -1,8 +1,8 @@
 <?php
 
-$host = "apaasiwe_";
-$user = "apaasiwe_";
-$pass = "eYQerVXcrhMe9YfZjd3d";
+$host = "localhost";
+$user = "root";
+$pass = "";
 $db = "appasi";
 
 $con = mysqli_connect($host, $user, $pass, $db);

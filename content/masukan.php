@@ -6,7 +6,6 @@
 <body>
     <button class="back-button" onclick="goBack()">Kembali</button> 
         <script>
-        // Fungsi untuk kembali ke halaman sebelumnya
             function goBack() {
             window.history.back();
         }
@@ -40,7 +39,7 @@
             const feedback = document.getElementById('feedback').value;
             if (feedback) {
                 alert("Terima kasih atas masukan Anda!");
-                document.getElementById('feedback').value = ''; // Reset textarea
+                document.getElementById('feedback').value = '';
             } else {
                 alert("Masukkan feedback sebelum mengirim.");
             }

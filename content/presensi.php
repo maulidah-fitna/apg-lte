@@ -58,7 +58,6 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     <td><?= $no ?></td>
     <td><?= $data['nama_siswa'] ?>
         <input type="hidden" name="nama_siswa[<?= $no ?>]" value="<?= $data['nama_siswa'] ?>">
-    </td>
     <td><input type="radio" name="kehadiran[<?= $no ?>]" value="hadir"></td>
     <td><input type="radio" name="kehadiran[<?= $no ?>]" value="alpa"></td>
     <td><input type="radio" name="kehadiran[<?= $no ?>]" value="izin"></td>
@@ -67,55 +66,16 @@ $g = htmlspecialchars($_GET['g'] ?? '');
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="seragam" checked></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="sepatu" checked></td>
     <td><input type="checkbox" name="atribut[<?= $no ?>][]" value="hasduk" checked></td>
+    </td>
+    <td>
+        <input type="hidden" name="kelas[<?= $no ?>]" value="<?= $data['kelas'] ?>">
+      </td>
+        <td><input type="hidden" name="jurusan[<?= $no ?>]" value="<?= $data['jurusan'] ?>">
+        </td>
 </tr>
 
 <?php
     }
-
-//else{
-//     $no = 1;
-?>
-<!-- 
-<thead>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Hadir</th>
-                    <th>Alpa</th>
-                    <th>Izin</th>
-                                    
-                    <th>Kaos Kaki</th>
-                    <th>Seragam</th>
-                    <th>Sepatu</th>
-                    <th>Hasduk</th>
-                    <th>Pin</th>
-                </thead>
-                <tbody>
-                 -->
-                <?php
-                        // $query = "SELECT * FROM data_siswa WHERE kelas='$k' && jurusan='$j' && gender='$g'";
-                        // $result = mysqli_query($con, $query);
-                        // $no = 0;
-
-                        // while($data = mysqli_fetch_assoc($result)) {
-                        //     $no++;
-                        ?>
-          <!-- <tr>
-            <td><?= $no ?></td>
-            <td><?= $data['nama_siswa'] ?></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="hadir"></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="alpa"></td>
-            <td><input type="radio" name="kehadiran[ <?= $no ?> ]" value="izin"></td>
-
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="kaos-kaki" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="seragam" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="sepatu" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="hasduk" checked></td>
-            <td><input type="checkbox" name="atribut[ <?= $no ?> ][]" value="pin" checked></td>
-        </tr> -->
-
-<?php
-// }
-// }
 ?>
                 </tbody>
                 

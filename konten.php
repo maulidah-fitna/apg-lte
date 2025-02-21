@@ -7,6 +7,7 @@
         "data-user",
         "data-absen-insert",
         "data-rekap",
+        "data-rekap2",
         "data-rekap-hapus",
         "pengaturan",
         "tambah-user",
@@ -22,15 +23,8 @@
         "siswa-update",
         "siswa-hapus",
         "masukan",
-        "xaklpa",
-        "xaklpi",
-        "xpplgpa",
-        "xpplgpi",
-        "xirplpa",
-        "xirplpi",
-        "xilpspa",
-        "xilpspi",
-        "presensi"
+        "presensi",
+        "logout"
         // "z-coretan"
     ];
 

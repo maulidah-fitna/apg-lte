@@ -23,7 +23,6 @@ include "library/config.php";
   <div class="login-box-body">
     <p class="login-box-msg">Sign In</p>
 
-    <!-- <form action="../../index2.html" method="post"> -->
     <form action="ceklogin.php" method="post">  
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="username" placeholder="Username">
@@ -35,11 +34,6 @@ include "library/config.php";
       </div>
       <div class="row">
         <div class="col-xs-8">
-          <!-- <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div> -->
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
@@ -48,18 +42,6 @@ include "library/config.php";
         <!-- /.col -->
       </div>
     </form>
-
-    <!-- <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-        Google+</a>
-    </div> -->
-    <!-- /.social-auth-links -->
-
-    <!-- <a href="#">I forgot my password</a><br>
-    <a href="register.html" class="text-center">Register a new membership</a> -->
 
   </div>
   <!-- /.login-box-body -->

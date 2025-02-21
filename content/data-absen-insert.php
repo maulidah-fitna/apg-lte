@@ -1,50 +1,39 @@
 <?php
-if(!defined('INDEX')) die();
+if (!defined('INDEX')) die();
 
-$query = "SELECT nama_siswa FROM data_siswa";
-$result = mysqli_query($con, $query);
-$data = mysqli_fetch_assoc($result);
-$nama = $data['nama_siswa'] ?? '';
-
-
+$j = htmlspecialchars($_POST['j'] ?? '');
+$k = htmlspecialchars($_POST['k'] ?? '');
+$g = htmlspecialchars($_POST['g'] ?? '');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (!isset($_POST['kehadiran']) || empty($_POST['kehadiran'])) {
+    if (empty($_POST['kehadiran'])) {
         die("Error: Harap pilih kehadiran!");
     }
-
+    
     foreach ($_POST['kehadiran'] as $no => $kehadiran) {
-        $nama_siswa = $_POST['nama_siswa'][$no] ?? NULL;
+        $nama_siswa = $_POST['nama_siswa'][$no] ?? '';
+        $kelas = $_POST['kelas'][$no] ?? '';
+        $jurusan = $_POST['jurusan'][$no] ?? '';
         $atribut = $_POST['atribut'][$no] ?? [];
-
-        // Menentukan atribut satu per satu
+        
+        // Konversi atribut ke nilai numerik
         $kaos_kaki = in_array("kaos_kaki", $atribut) ? 1 : 0;
         $sabuk = in_array("sabuk", $atribut) ? 1 : 0;
         $seragam = in_array("seragam", $atribut) ? 1 : 0;
         $sepatu = in_array("sepatu", $atribut) ? 1 : 0;
         $hasduk = in_array("hasduk", $atribut) ? 1 : 0;
-
-        if (!$con) {
-            die("Koneksi ke database terputus!");
-        }
-
+        $atribut_str = implode(", ", $atribut);
+        
         // Query untuk menyimpan data
-        $stmt = $con->prepare("INSERT INTO data_rekap (nama_siswa, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input) 
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");        $atribut_str = implode(", ", $atribut);
-        $stmt->bind_param("ssiiiiss", $nama_siswa, $kehadiran, $kaos_kaki, $sabuk, $seragam, $sepatu, $hasduk, $atribut_str);
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Data Berhasil Ditambah!'); window.location.href='?hal=data-user';</script>";
-        echo "<meta http-equiv='refresh' content='0; url=?hal=data-absen'>";
-
-    } else {
-        echo "Gagal menyimpan data: " . $stmt->error;
+        $query = "INSERT INTO data_rekap (nama_siswa, kelas, jurusan, kehadiran, kaos_kaki, sabuk, seragam, sepatu, hasduk, atribut, tanggal_input) 
+                  VALUES ('$nama_siswa', '$kelas', '$jurusan', '$kehadiran', '$kaos_kaki', '$sabuk', '$seragam', '$sepatu', '$hasduk', '$atribut_str', NOW())";
+        
+        if (!mysqli_query($con, $query)) {
+            echo "Gagal menyimpan data: " . mysqli_error($con);
+            exit;
+        }
     }
-
-    $stmt->close();
+    
+    echo "<script>alert('Data Berhasil Ditambah!'); window.location.href='?hal=data-absen';</script>";
 }
-
-}
-
-
 ?>
